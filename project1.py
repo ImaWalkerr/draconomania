@@ -12,3 +12,6 @@ for m in range(4):
     k = k + m
 k = k / 12
 print("k ravno " + str(k))
+
+def luc(x):
+    print(luc("ты видишь изменения?"))
