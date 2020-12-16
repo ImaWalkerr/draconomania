@@ -33,27 +33,4 @@ def res():
 #males_only = df[(df['Sex'] == 'male') & (df['Survived'] == 1)].shape[0]
 #print(female_only/(female_only+male_only)*100)
 
-#используем 1 df на 1 значение. .shape[0] чтобы получить значение из таблицы
-
-import pandas
-info = pandas.read_csv("E:/Games/info.csv")
-marks = pandas.read_csv("E:Games/marks.csv")
-
-#Описание info:
-#id - номер студента
-#gender - пол студента
-#race - расса студента
-#parents_education - образование родителей студента
-
-#Описание marks:
-#id2 - номер студента
-#lunch - есть ли скидка в столовке у студента
-#prep_course - ходил ли студент на подготовительные курсы
-#math - оценка по математике
-#reading - оценка по чтению
-#writing - оценка граматнасьци студента
-
-#1. Узнайте для скольких людей из датафрейма info неизвестны оценки.
-#Подсказка: нужно использовать 1 merge некоторого типа и .shape
-print(df.columns)
-all1 = df[(df['id'] == 'math', 'reading', 'writing') & (df['id'].merge)]
+#используем 1 df на 1 значение. .shape[0] чтобы получить значение из таблиц
