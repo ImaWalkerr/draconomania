@@ -1,0 +1,64 @@
+{% extends 'Draco/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="wrapper__dragons_catalog">
+        <div class="collection">
+            <div class="collection__header_dragon">
+                <h3 class="collection__title">Коллекция Дракономании / Дракон Апофис</h3>
+            </div>
+        </div>
+        <div class="dragon__collage image collage">
+            <div class="image__background_egg">
+                <img src="{{ dragon.image_1.url }}" class="image__egg" alt="Форма яйца">
+                <h3 class="dragon__name">Яйцо</h3>
+                <div class="dragon__rarity">
+                    <img src="{{ dragon.usual_pic.url }}" alt="Редкость">
+                </div>
+            </div>
+            <div class="image__background_small">
+                <img src="{{ dragon.image_3.url }}" class="image__small" alt="Форма детеныша">
+                <h3 class="dragon__name">Детеныш</h3>
+                <div class="dragon__rarity">
+                    <img src="{{ dragon.usual_pic.url }}" alt="Редкость">
+                </div>
+            </div>
+            <div class="image__background_big">
+                <img src="{{ dragon.image_2.url }}" class="image__big" alt="Форма взрослого">
+                <h3 class="dragon__name">Взрослый</h3>
+                <div class="dragon__rarity">
+                    <img src="{{ dragon.usual_pic.url }}" alt="Редкость">
+                </div>
+            </div>
+            <div class="collage__table">
+                <div class="table__info_dragons">
+                    <div class="table__main_1"><p>Типы атак</p></div>
+                    <div class="table__main_2">fafaf</div>
+                    <div class="table__image">sgdgksjgks</div>
+                    <div class="table__text">affadaadad.</div>
+                    <div class="table__image">adgsah</div>
+                    <div class="table__text">afaffaaffaaf.</div>
+                    <div class="table__image">sgdgksjgks</div>
+                    <div class="table__text">affadaadad.</div>
+                    <div class="table__image">adgsah</div>
+                    <div class="table__text">afaffaaffaaf.</div>
+                    <div class="table__image">sgdgksjgks</div>
+                    <div class="table__text">affadaadad.</div>
+                    <div class="table__image">sgdgksjgks</div>
+                    <div class="table__text">affadaadad.</div>
+                    <div class="table__image">adgsah</div>
+                    <div class="table__text">afaffaaffaaf.</div>
+                    <div class="table__image">sgdgksjgks</div>
+                    <div class="table__text">affadaadad.</div>
+                    <div class="table__image">adgsah</div>
+                    <div class="table__text">afaffaaffaaf.</div>
+                    <div class="table__image image__last">fagagas</div>
+                    <div class="table__text text__last">Сaffafaafaf.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

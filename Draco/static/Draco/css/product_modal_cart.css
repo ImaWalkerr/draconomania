@@ -1,0 +1,389 @@
+/* СТИЛИ КОРЗИНА */
+.cart {
+    position: relative;
+    margin: 0 15px;
+}
+
+.cart__text {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 18px;
+    color: var(--color-black);
+}
+
+.cart__text.active:hover {
+    cursor: pointer;
+    color: var(--color-stars);
+    text-decoration: underline;
+}
+
+.cart__text.active:hover span {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.cart__quantity {
+    position: absolute;
+    transform: translateY(-50%);
+    color: var(--color-white);
+    background-color: var(--color-stars);
+    margin: -10px 0 0 0;
+    border-radius: 100%;
+    padding: 3px;
+    min-height: 16px;
+    min-width: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-family: 'Balsamiq Sans', cursive;
+    line-height: 1;
+}
+
+.cart-content {
+    cursor: default;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 490px;
+    background-image: url("/media/web_media/other/background-header-menu.png");
+    background-size: cover;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    border-radius: 10px;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.cart.active:hover .cart-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+
+.cart.active:focus .cart-content {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.cart-content__list {
+    max-height: 330px;
+}
+
+.cart-content__item {
+    background-image: url("/media/web_media/other/background-header-menu.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+}
+
+.cart-product {
+    display: flex;
+    align-items: center;
+    background-image: url("/media/web_media/other/BG_Card_for_cart.png");
+    background-size: cover;
+    background-position: center;
+    padding: 15px 20px;
+    border-radius: 10px;
+}
+
+.cart-product:hover {
+    border-radius: 10px;
+    border: 2px solid var(--color-black);
+}
+
+.cart-product:hover .cart-product__title {
+    color: var(--color-white);
+}
+
+.cart-product__img {
+    max-height: 100px;
+    max-width: 100px;
+    object-fit: cover;
+    margin: 0 15px 0 0;
+}
+
+.cart-product__title {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-black);
+    max-width: 280px;
+    margin: 10px 0;
+}
+
+.cart-product__price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-red);
+}
+
+.cart-product__delete {
+    height: 20px;
+    width: 20px;
+    margin-left: auto;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    padding: 0;
+    background-image: url("/media/web_media/other/delete-round-button.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.cart-content__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 20px;
+}
+
+.cart-content__fullprice {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+.fullprice {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-red);
+    margin: 8px 0 0 0;
+}
+
+.cart-content__btn {
+    width: 246px;
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 16px;
+    color: var(--color-white);
+    background-color: var(--color-stars);
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.cart-content__btn:hover {
+    color: var(--color-black);
+    background-color: var(--color-light);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.simplebar-track.simplebar-vertical {
+    margin: 20px 0 0 0;
+    height: calc(100% - 40px);
+    right: 5px;
+}
+
+/* СТИЛИ МОДАЛ ОКНО КОРЗИНЫ */
+.modal__container {
+    min-height: 550px;
+    width: 550px;
+}
+
+.order-modal__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-modal__title {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-black);
+    padding: 0 0 25px 0;
+}
+
+.order-modal__number {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: right;
+    color: var(--color-darkgrey);
+}
+
+.order-modal__info {
+    border: 2px solid var(--color-black);
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 35px 40px;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    margin: 0 0 20px 0;
+    background: url("/media/web_media/other/BG_Catalog.png");
+    background-size: cover;
+}
+
+.order-modal__info span {
+    font-weight: 600;
+}
+
+.order-modal__info-item:not(:last-child) {
+    margin: 0 0 15px 0;
+}
+
+.order-modal__item {
+    background: url("/media/web_media/other/BG_Card_for_cart.png");
+    background-size: cover;
+    border: 2px solid var(--color-black);
+    border-radius: 10px;
+}
+
+.order-modal__btn {
+    position: relative;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    max-width: 100%;
+    cursor: pointer;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 16px;
+    color: var(--color-white);
+    background-color: var(--color-stars);
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.order-modal__btn:hover {
+    color: var(--color-black);
+    background-color: var(--color-light);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.order-modal__btn::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    height: 20px;
+    width: 20px;
+    background-image: url("/media/web_media/other/delete-round-button.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+.order {
+    padding: 0 40px;
+}
+
+.order__text {
+    margin: 15px 10px;
+}
+
+.order__label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 16px;
+    color: var(--color-black);
+    margin:  0 0 15px 0;
+}
+
+.order__input {
+    min-width: 240px;
+    height: 45px;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 16px;
+    background: var(--color-white);
+    border: 1px solid var(--color-black);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.order__input::placeholder {
+    color: var(--color-darkgrey);
+}
+
+.order__btn {
+    position: relative;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+    cursor: pointer;
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 16px;
+    color: var(--color-white);
+    background-color: var(--color-stars);
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.order__btn:hover {
+    color: var(--color-black);
+    background-color: var(--color-light);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.order-product {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order-modal__list {
+    display: none;
+    padding: 20px 0;
+}
+
+.order-modal__item:not(:last-child) {
+    margin: 0 0 15px 0;
+}
+
+.order-product__img {
+    max-width: 70px;
+    max-height: 70px;
+    object-fit: cover;
+    margin: 0 10px;
+    padding: 5px;
+}
+
+.order-product__text {
+    margin: 0 10px 0 0;
+}
+
+.order-product__title {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 16px;
+    color: var(--color-black);
+    line-height: 20px;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+}
+
+.order-product__price {
+    font-family: 'Balsamiq Sans', cursive;
+    font-size: 16px;
+    color: var(--color-red);
+    font-weight: 700;
+}
+
+.order-product__delete {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    padding: 0;
+    background-image: url("/media/web_media/other/delete-round-button.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin: 0 20px 0 0;
+}

@@ -1,0 +1,405 @@
+/* СТИЛИ RESOURCES */
+.table__info {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: minmax(30px, auto);
+    padding: 0 200px;
+    margin: 20px 0;
+}
+
+.table__info > div:hover {
+    background: url("/media/web_media/other/background-header-menu.png") no-repeat;
+    background-size: cover;
+}
+
+.table__main_1 {
+    max-height: 50px;
+    font-family: var(--font-family-main);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-black);
+    text-align: center;
+    padding: 15px 5px;
+    background-color: palegoldenrod;
+    border-bottom: 2px solid var(--color-black);
+    border-radius: 10px 0 0 0;
+}
+
+.border__main {
+    padding: 15px 5px;
+}
+
+.table__main_2 {
+    max-height: 50px;
+    font-family: var(--font-family-main);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-black);
+    text-align: center;
+    background-color: palegoldenrod;
+    border-bottom: 2px solid var(--color-black);
+    padding: 15px 5px;
+    border-radius: 0 10px 0 0;
+}
+
+.border__second {
+    padding: 5px;
+}
+
+.table__text {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-black);
+    text-align: center;
+    padding: 10px;
+    background-color: lightblue;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.table__text_last-child {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-black);
+    text-align: center;
+    padding: 10px;
+    background-color: lightblue;
+    border-radius: 0 0 10px 0;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.table__text_main {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-black);
+    text-align: center;
+    padding: 10px;
+    background-color: palegoldenrod;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.table__text_last {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-black);
+    text-align: center;
+    padding: 10px;
+    background-color: lightblue;
+    border-bottom: 2px solid var(--color-black);
+    border-radius: 0 0 10px 0;
+}
+
+.table__image {
+    font-family: var(--font-family-main);
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    padding: 10px;
+    color: var(--color-black);
+    background-color: palegoldenrod;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.image__last {
+    border-radius: 0 0 0 10px;
+}
+
+.text__last {
+    border-radius: 0 0 10px 0;
+}
+
+.table__image img {
+    width: 70px;
+    height: 50px;
+    object-fit: contain;
+    margin: 0 40%;
+    padding: 3px 0 0 0;
+}
+
+.table__image_last img {
+    width: 70px;
+    height: 50px;
+    object-fit: contain;
+    margin: 0 40%;
+    padding: 3px 0 0 0;
+}
+
+.elements__third-table {
+    width: 1400px;
+    padding: 0 200px;
+    margin: 20px 0;
+}
+
+.table__section_title > div:hover {
+    background: url("/media/web_media/other/background-header-menu.png") no-repeat;
+    background-size: cover;
+}
+
+.table__section_main {
+    display: grid;
+    grid-template-columns: repeat(2, 4fr);
+    grid-auto-rows: minmax(30px, auto);
+    text-align: center;
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+.table__text_main:hover {
+    background: url("/media/web_media/other/background-header-menu.png") no-repeat;
+    background-size: cover;
+}
+
+.table__text_main {
+    text-align: center;
+    font-family: var(--font-family-main);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-black);
+    background-color: palegoldenrod;
+    padding: 10px;
+}
+
+.second-child {
+    border-radius: 0 10px 0 0;
+}
+
+.text__border {
+    border-radius: 0 0 10px 0;
+}
+
+.text__main_border {
+    border-radius: 0 0 0 10px;
+}
+
+.table__section_title {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    grid-auto-rows: minmax(30px, auto);
+    text-align: center;
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 260px;
+    color: var(--color-black);
+}
+
+.table__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    font-family: var(--font-family-main);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-black);
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid var(--color-black);
+    background-color: palegoldenrod;
+}
+
+.table__title:hover {
+    background: url("/media/web_media/other/background-header-menu.png") no-repeat;
+    background-size: cover;
+}
+
+.table__title img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    margin: 0 10px;
+}
+
+.table__section_secondary {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-auto-columns: minmax(30px, auto);
+    justify-content: center;
+}
+
+.table__text_second {
+    text-align: center;
+    font-family: var(--font-family-main);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-black);
+    background-color: lightblue;
+    border-bottom: 2px solid var(--color-black);
+    padding: 5px;
+}
+
+.third-child {
+    border-radius: 0 0 0 10px;
+}
+
+.fourth-child {
+    border-radius: 0 0 10px 0;
+}
+
+.table__text_second:hover {
+    background: url("/media/web_media/other/background-header-menu.png") no-repeat;
+    background-size: cover;
+}
+
+.table__elements img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+.table__main_2 img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+.text__about_resource {
+    max-width: 1200px;
+    padding: 0 200px;
+    text-align: left;
+    font-family: var(--font-family-main);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--color-black);
+}
+
+.dragon__collage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image__background_egg {
+    position: relative;
+    width: 220px;
+    height: 230px;
+    padding: 15px;
+    background-image: url("/media/web_media/other/Card_legendary.png");
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px solid var(--color-black);
+    margin: 10px;
+}
+
+.image__egg {
+    width: 170px;
+    height: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    background-image: url("/media/web_media/other/BG_Transparent.png");
+    background-size: cover;
+}
+
+.image__egg img {
+    width: 150px;
+    height: 180px;
+    object-fit: contain;
+}
+
+.image__background_small {
+    position: relative;
+    width: 255px;
+    height: 295px;
+    padding: 15px;
+    background-image: url("/media/web_media/other/Card_legendary.png");
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px solid var(--color-black);
+    margin: 10px;
+}
+
+.image__small {
+    width: 220px;
+    height: 260px;
+    padding: 25px;
+    border-radius: 10px;
+    background-image: url("/media/web_media/other/BG_Transparent.png");
+    background-size: cover;
+}
+
+.image__small img {
+    width: 200px;
+    height: 230px;
+    object-fit: contain;
+}
+
+.image__background_big {
+    position: relative;
+    width: 280px;
+    height: 320px;
+    padding: 15px;
+    background-image: url("/media/web_media/other/Card_legendary.png");
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px solid var(--color-black);
+    margin: 10px;
+}
+
+.image__big {
+    width: 220px;
+    height: 285px;
+    padding: 15px;
+    border-radius: 10px;
+    background-image: url("/media/web_media/other/BG_Transparent.png");
+    background-size: cover;
+}
+
+.image__big img {
+    width: 220px;
+    height: 230px;
+    object-fit: contain;
+}
+
+.collage__table {
+    width: 780px;
+    height: 420px;
+}
+
+.table__info_dragons {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    width: 700px;
+    height: 420px;
+    grid-auto-rows: minmax(30px, auto);
+    padding: 0 20px;
+    margin: 20px 0;
+}
+
+.table__info_dragons > div:hover {
+    background: url("/media/web_media/other/background-header-menu.png") no-repeat;
+    background-size: cover;
+}
+
+.dragon__rarity {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    height: 20px;
+}
+
+.dragon__rarity img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.dragon__name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    margin: 0 0 0 25px;
+    font-family: var(--font-family-main);
+    font-weight: 600;
+    font-size: 24px;
+    color: var(--color-black);
+    cursor: pointer;
+}
+
+.dragon__name:hover {
+    text-decoration: underline;
+}

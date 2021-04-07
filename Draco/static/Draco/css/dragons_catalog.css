@@ -1,0 +1,320 @@
+/* СТИЛИ КОЛЛЕКЦИЯ ДРАКОНОВ */
+.wrapper__dragons_catalog {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 100px 50px;
+}
+
+.collection__header {
+    font-family: var(--font-family-main);
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    width: 1400px;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 25px 0;
+}
+
+.collection__header_dragon {
+    font-family: var(--font-family-main);
+    font-size: 20px;
+    font-weight: 400;
+    display: flex;
+    width: 1400px;
+    height: 70px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.collection__search {
+    min-width: 300px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--color-black);
+    text-align: center;
+    padding: 2px 0 0 0;
+    background-image: url("/media/web_media/other/background-header-menu.png");
+    background-size: cover;
+}
+
+.collection__title {
+    color: var(--color-black);
+    text-decoration: none;
+}
+
+.collection__title:hover {
+    text-decoration: underline;
+}
+
+.dragons__search {
+    min-width: 240px;
+    height: 25px;
+    border: 1px solid var(--color-black);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.dragons__search-btn {
+    height: 22px;
+    width: 45px;
+    color: white;
+    background-color: var(--color-stars);
+    border-bottom: 2px solid var(--color-black);
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.dragons__search-btn:hover {
+    color: black;
+    background-color: var(--color-light);
+}
+
+.collection__carts {
+    display: flex;
+}
+
+.product {
+    width: 300px;
+    height: 380px;
+    background-image: url("/media/web_media/other/Card_legendary.png");
+    background-size: cover;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 20px 0 0;
+    font-size: 14px;
+    border: 2px solid var(--color-black);
+}
+
+.product__background {
+    height: 350px;
+    background-image: url("/media/web_media/other/BG_Transparent.png");
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.product__image {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 200px;
+}
+
+.product__rarity {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 20px;
+    z-index: 2;
+}
+
+.image-switch {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.image-switch__item {
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.image-switch__img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 6;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    background-image: url("/media/web_media/other/background-header-menu.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid var(--color-black);
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.image-switch__img img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-switch__item:first-child .image-switch__img {
+    opacity: 1;
+    z-index: -1;
+}
+
+.image-switch__item:hover .image-switch__img {
+    opacity: 1;
+    z-index: -1;
+}
+
+.image-pagination {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-pagination__item {
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 0 3px;
+    border-bottom: 2px solid var(--color-black);
+    background-color: var(--color-white);
+}
+
+.image-pagination__item-active {
+    border-bottom: 2px solid var(--color-black);
+    background-color: var(--color-light);
+}
+
+.product__title {
+    font-family: var(--font-family-main);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: var(--color-black);
+    margin: 10px 20px 0 20px;
+    text-align: left;
+}
+
+.product__title a {
+    color: var(--color-black);
+}
+
+.product__title a:hover {
+    color: var(--color-light);
+    text-decoration: underline;
+}
+
+.product__props {
+    display: flex;
+    align-items: center;
+}
+
+.product__rating {
+    display: inline-flex;
+    align-items: center;
+    color: var(--color-stars);
+    font-weight: 600;
+    margin: 5px 10px;
+}
+
+.product__rating svg {
+    fill: currentColor;
+    margin: 0 10px;
+}
+
+.product__testimonials {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    color: var(--color-black);
+    margin: 5px;
+}
+
+.product__info {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    color: var(--color-black);
+    margin: 0 10px;
+}
+
+.product__dragon_info {
+    font-family: var(--font-family-main);
+    font-size: 20px;
+    color: var(--color-black);
+    margin: 0 10px;
+}
+
+.product__term {
+    display: block;
+    margin: 5px 10px;
+}
+
+.product__available {
+    display: block;
+    margin: 0 10px;
+}
+
+.product__price {
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.product__dragon_elements img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+    margin: 5px;
+}
+
+.product-price__current {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    color: var(--color-red);
+    margin: 0 25px 0 0;
+}
+
+.product-dragon__about {
+    font-family: var(--font-family-main);
+    font-size: 20px;
+    color: var(--color-black);
+    margin: 0 15px 0 0;
+}
+
+.product-price__old {
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    color: var(--color-darkgrey);
+    text-decoration: line-through;
+}
+
+.product__btn {
+    border: none;
+    border-radius: 4px;
+    width: 70%;
+    color: var(--color-white);
+    background-color: var(--color-light);
+    cursor: pointer;
+    margin: 5px 40px;
+    font-family: var(--font-family-main);
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+    border-bottom: 2px solid var(--color-black);
+}
+
+.product__btn:hover {
+    color: var(--color-black);
+    background-color: var(--color-stars);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.product__btn:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+>

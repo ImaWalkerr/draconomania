@@ -1,0 +1,163 @@
+/* ОБНУЛЕНИЕ */
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,*:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,:active {outline: none;}
+a:focus,a:active {outline: none;}
+
+nav,footer,header,aside {display: block;}
+
+input::-ms-clear {display: none;}
+button {cursor: pointer;}
+button::-moz-focus-inner {padding: 0; border: 0;}
+a, a:visited {text-decoration: none;}
+a:hover {text-decoration: none;}
+ul li {list-style: none;}
+
+
+html,body {
+    height: 100%;
+    width: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body._lock{
+    overflow: hidden;
+}
+input,button,textarea {font-family: inherit;}
+
+/* ПЕРЕМЕННЫЕ */
+:root {
+    --color-stars: darkorange;
+    --color-red: red;
+    --color-black: black;
+    --color-white: white;
+    --color-grey: gainsboro;
+    --color-darkgrey: darkgrey;
+    --font-family-main: 'Balsamiq Sans', cursive;
+}
+
+/*ТЕСТ СТИЛЕЙ*/
+.page {
+    padding: 70px 0 30px 0;
+}
+
+.page__section {
+    height: 685px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+/*СЛАЙДЫ*/
+.clip {
+    position: absolute;
+    height: 685px;
+    width: 100%;
+}
+
+.page__img_1 {
+    background: url("/media/web_media/info/1_right.png") no-repeat center;
+    background-size: cover;
+}
+
+.page__img_2 {
+    background: url("/media/web_media/info/1_left.png") no-repeat center;
+    background-size: cover;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 112% 0, 0 100%);
+}
+
+.page__img_2:hover ~ .page__text {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+}
+
+.page__img_2:hover ~ .page__title {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 7.5px;
+}
+
+.page__img_1:hover ~ .page__img_2 {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.page__img_2:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.page__img_home img {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+}
+
+.page__img_3 {
+    background: url("/media/web_media/info/2_right.png") no-repeat center;
+    background-size: cover;
+}
+
+.page__img_4 {
+    background: url("/media/web_media/info/2_left.png") no-repeat center;
+    background-size: cover;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+}
+
+.page__img_3:hover ~ .page__text {
+    color: var(--color-black);
+}
+
+.page__img_3:hover ~ .page__sub-title {
+    color: var(--color-black);
+}
+
+.page__img_3:hover ~ .page__img_4 {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.page__img_4:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.page__img_5 {
+    background: url("/media/web_media/info/1_right.png") no-repeat center;
+    background-size: cover;
+}
+
+.page__img_6 {
+    background: url("/media/web_media/info/1_left.png") no-repeat center;
+    background-size: cover;
+    transition: 0.5s;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
+}
+
+.page__img_5:hover ~ .page__text {
+    color: var(--color-black);
+}
+
+.page__img_5:hover ~ .page__sub-title {
+    color: var(--color-black);
+}
+
+.page__img_5:hover ~ .page__img_6 {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+}
+
+.page__img_6:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}

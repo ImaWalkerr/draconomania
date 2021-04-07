@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="/static/draco/css/main_file.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="wrapper__main_page">
+    <header class="header">
+        <div class="header__container">
+            <a href="" class="header__logo"><img alt="Логотип" src="/media/web_media/other/Icon_Logo.png"></a>
+            <div class="header__menu menu">
+                <div class="menu__icon">
+                    <span></span>
+                </div>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li><a href="/" class="menu__link">Главная</a></li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu__link">Коллекция</a>
+                            <span class="menu__arrow"></span>
+                            <ul class="menu__sub-list">
+                                <li><a href="{% url 'dragons_catalog' %}" class="menu__sub-link">Драконы</a></li>
+                                <li><a href="{% url 'homes' %}" class="menu__sub-link">Жилища</a></li>
+                                <li><a href="{% url 'islands' %}" class="menu__sub-link">Острова</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu__link">Ресурсы</a>
+                            <span class="menu__arrow"></span>
+                            <ul class="menu__sub-list">
+                                <li><a href="{% url 'resource_elements' %}" class="menu__sub-link">Элементы</a></li>
+                                <li><a href="{% url 'resource_symbols' %}" class="menu__sub-link">Символы</a></li>
+                                <li><a href="{% url 'resource_food' %}" class="menu__sub-link">Еда</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu__link">Справка</a>
+                            <span class="menu__arrow"></span>
+                            <ul class="menu__sub-list">
+                                <li><a href="#popup_4" class="menu__link">Калькулятор</a></li>
+                                <li><a href="#popup_5" class="menu__sub-link">Добавить дракона</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu__link">RU</a>
+                            <span class="menu__arrow"></span>
+                            <ul class="menu__sub-list">
+                                <li><a href="#" class="menu__sub-link">EN</a></li>
+                                <li><a href="#" class="menu__sub-link">BLR</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="menu__link">Профиль</a>
+                            <span class="menu__arrow"></span>
+                            <ul class="menu__sub-list">
+                                <li><a href="javascript:void(0);" class="menu__sub-link">Юзернейм</a></li>
+                                <li><a href="javascript:void(0);" class="menu__sub-link">Форум</a></li>
+                                <li><a href="{% url 'draconomania_store' %}" class="menu__sub-link">Магазин</a></li>
+                                <li><a href="#" class="menu__sub-link">Войти/Выйти</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__cart cart" tabindex="0">
+                <div class="cart__text">
+                    Корзина
+                    <span class="cart__quantity">0</span>
+                </div>
+                <div class="cart-content">
+                    <ul class="cart-content__list" data-simplebar>
+                       <!-- <li class="cart-content__item">
+                            <article class="cart-content__product cart-product">
+                                <img src="/media/web_media/dragons/Апофис_взрослый.png" alt="Дракон" class="cart-product__img">
+                                <div class="cart-product__text">
+                                    <h3 class="cart-product__title">Божественный дракон Апофис</h3>
+                                    <span class="cart-product__price">100 $</span>
+                                </div>
+                                <button class="cart-product__delete" aria-label="Удалить товар"></button>
+                            </article>
+                        </li> -->
+                    </ul>
+                    <div class="cart-content__bottom">
+                        <div class="cart-content__fullprice">
+                            <span>Итого: </span>
+                            <span class="fullprice">$</span>
+                        </div>
+                        <button class="cart-content__btn" data-graph-path="modal" data-graph-animation="fadeInUp" data-graph-speed="700">Перейти в корзину</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="page__base">
+       <div class="header-slider">
+        <nav class="header-slider__menu header-menu">
+            <a href="javascript:void(0);" class="header-menu__link">Слайд 1</a>
+            <a href="javascript:void(0);" class="header-menu__link">Слайд 2</a>
+            <a href="javascript:void(0);" class="header-menu__link">Слайд 3</a>
+        </nav>
+    </div>
+    <div class="page__slider">
+        <div class="page__wrapper">
+            <div class="page__screen screen">
+                <div class="screen__content">
+                    <h1 class="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">МЕЙН заголовок</h1>
+                    <div class="screen__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+                        <p>Наши контакты ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофымтфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
+                            ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофымтфлоптфлылоиофипопилоифлопяполыпоиплоип</p>
+                    </div>
+                </div>
+                <div class="screen__body">
+                    <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+                        <img src="/media/web_media/other/slide-1.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="page__screen screen">
+                <div class="screen__content">
+                    <h2 class="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">Почти МЕЙН заголовок 2</h2>
+                    <div class="screen__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+                        <p>Наши контакты ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофымтфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
+                            ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофымтфлоптфлылоиофипопилоифлопяполыпоиплоип</p>
+                    </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zJZfuJdycGc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="screen__body">
+                    <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+                        <img src="/media/web_media/other/slide-2.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="page__screen screen">
+                <div class="screen__content">
+                    <h2 class="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">Почти МЕЙН заголовок 3</h2>
+                    <div class="screen__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+                        <p>Наши контакты ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофымтфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
+                            ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофымтфлоптфлылоиофипопилоифлопяполыпоиплоип</p>
+                    </div>
+                </div>
+                <div class="screen__body">
+                    <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
+                        <img src="/media/web_media/other/slide-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="page__pagination"></div>
+            <div class="page__scroll"></div>
+        </div>
+    </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__container">
+            <nav class="footer__menu">
+                <ul class="menu__list">
+                    <li><a href="#popup_1" class="popup__link">Пользовательское соглашение</a></li>
+                    <li><a href="#popup_2" class="popup__link">О нас</a></li>
+                    <li><a href="#popup_3" class="popup__link">Контакты</a></li>
+                    <li><a href="javascript:void(0);" class="menu__link">2021, All website content subjected to copyright</a></li>
+                </ul>
+            </nav>
+            <div class="time">МСК<div id="time"></div></div>
+        </div>
+    </footer>
+    <div class="modal">
+        <div class="modal__container order-modal" role="dialog" aria-modal="true" data-graph-target="modal">
+            <div class="modal-content order-modal__content">
+                <div class="order-modal__top">
+                    <h2 class="order-modal__title">Оформление заказа</h2>
+                    <span class="order-modal__number">Заказ № 3456</span>
+                </div>
+                <div class="order-modal__info">
+                    <div class="order-modal__quantity order-modal__info-item">Товаров в заказе:<span></span></div>
+                    <div class="order-modal__summary order-modal__info-item">Общая сумма заказа:<span></span></div>
+                    <div class="order-modal__products order-modal__info-item">
+                        <button class="order-modal__btn">Состав заказа</button>
+                        <ul class="order-modal__list"></ul>
+                    </div>
+                </div>
+                <form action="#" class="order-modal__form order">
+                    <label class="order__label">
+                        <span class="order__text">Ваше имя</span>
+                        <input type="text" class="order__input">
+                    </label>
+                    <label class="order__label">
+                        <span class="order__text">Номер телефона</span>
+                        <input type="tel" class="order__input" placeholder="+375 (__)___-__-__">
+                    </label>
+                    <label class="order__label">
+                        <span class="order__text">Электронная почта</span>
+                        <input type="email" class="order__input" placeholder="post@gmail.com">
+                    </label>
+                    <button class="order__btn">Оформить заказ</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div id="popup_1" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <div class="popup__title">Заголовок</div>
+                <div class="popup__text">Куча текста</div>
+            </div>
+        </div>
+    </div>
+    <div id="popup_2" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <div class="popup__title">Заголовок</div>
+                <div class="popup__text">Куча текста</div>
+            </div>
+        </div>
+    </div>
+    <div id="popup_3" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <div class="popup__title">Заголовок</div>
+                <div class="popup__text">Куча текста</div>
+            </div>
+        </div>
+    </div>
+    <div id="popup_4" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <div class="popup__title">Заголовок</div>
+                <div class="popup__text">Куча текста</div>
+            </div>
+        </div>
+    </div>
+    <div id="popup_5" class="popup">
+        <div class="popup__body">
+            <div class="popup__content">
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <div class="popup__title">Заголовок</div>
+                <div class="popup__text">Куча текста</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="static/draco/js/swiper_style.js"></script>
+<script src="static/draco/js/js_new_style.js"></script>
+</body>
+</html>
