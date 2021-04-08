@@ -73,7 +73,6 @@ input,button,textarea {font-family: inherit;}
     top: 0;
     left: 0;
     width: 100%;
-    height: 800px;
     background: url("/media/web_media/other/BG_Catalog.png");
     background-size: contain;
 }

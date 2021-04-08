@@ -8,26 +8,26 @@
     <div class="wrapper__dragons_catalog">
         <div class="collection">
             <div class="collection__header_dragon">
-                <h3 class="collection__title">Коллекция Дракономании / Дракон Апофис</h3>
+                <h3 class="collection__title">Коллекция Дракономании / Дракон {{ dragon_trans.name }}</h3>
             </div>
         </div>
         <div class="dragon__collage image collage">
             <div class="image__background_egg">
-                <img src="{{ dragon.image_1.url }}" class="image__egg" alt="Форма яйца">
+                <img src="{{ dragon.image1.url }}" class="image__egg" alt="Форма яйца">
                 <h3 class="dragon__name">Яйцо</h3>
                 <div class="dragon__rarity">
                     <img src="{{ dragon.usual_pic.url }}" alt="Редкость">
                 </div>
             </div>
             <div class="image__background_small">
-                <img src="{{ dragon.image_3.url }}" class="image__small" alt="Форма детеныша">
+                <img src="{{ dragon.image3.url }}" class="image__small" alt="Форма детеныша">
                 <h3 class="dragon__name">Детеныш</h3>
                 <div class="dragon__rarity">
                     <img src="{{ dragon.usual_pic.url }}" alt="Редкость">
                 </div>
             </div>
             <div class="image__background_big">
-                <img src="{{ dragon.image_2.url }}" class="image__big" alt="Форма взрослого">
+                <img src="{{ dragon.image2.url }}" class="image__big" alt="Форма взрослого">
                 <h3 class="dragon__name">Взрослый</h3>
                 <div class="dragon__rarity">
                     <img src="{{ dragon.usual_pic.url }}" alt="Редкость">
@@ -35,29 +35,35 @@
             </div>
             <div class="collage__table">
                 <div class="table__info_dragons">
-                    <div class="table__main_1"><p>Типы атак</p></div>
-                    <div class="table__main_2">fafaf</div>
-                    <div class="table__image">sgdgksjgks</div>
-                    <div class="table__text">affadaadad.</div>
-                    <div class="table__image">adgsah</div>
-                    <div class="table__text">afaffaaffaaf.</div>
-                    <div class="table__image">sgdgksjgks</div>
-                    <div class="table__text">affadaadad.</div>
-                    <div class="table__image">adgsah</div>
-                    <div class="table__text">afaffaaffaaf.</div>
-                    <div class="table__image">sgdgksjgks</div>
-                    <div class="table__text">affadaadad.</div>
-                    <div class="table__image">sgdgksjgks</div>
-                    <div class="table__text">affadaadad.</div>
-                    <div class="table__image">adgsah</div>
-                    <div class="table__text">afaffaaffaaf.</div>
-                    <div class="table__image">sgdgksjgks</div>
-                    <div class="table__text">affadaadad.</div>
-                    <div class="table__image">adgsah</div>
-                    <div class="table__text">afaffaaffaaf.</div>
-                    <div class="table__image image__last">fagagas</div>
-                    <div class="table__text text__last">Сaffafaafaf.</div>
+                    <div class="table__main_1 dragon__border"><p>{{ dragon_trans.name }}</p></div>
+                    <div class="table__main_2 dragon__border">Уровень 1</div>
+                    <div class="table__image">Атака</div>
+                    <div class="table__text">{{ dragon.dmg }}</div>
+                    <div class="table__image">Здоровье</div>
+                    <div class="table__text">{{ dragon.hp }}</div>
+                    <div class="table__image">Золото/час</div>
+                    <div class="table__text">{{ dragon.gold }}</div>
+                    <div class="table__image">Опыт за разведение</div>
+                    <div class="table__text">{{ dragon.exp }}</div>
+                    <div class="table__image">Золото за продажу</div>
+                    <div class="table__text">{{ dragon.sale }}</div>
+                    <div class="table__image image__last">Очки выведения</div>
+                    <div class="table__text text__last">{{ dragon.points }}</div>
                 </div>
+            </div>
+        </div>
+        <div class="dragon__text description">
+            <div class="description__dragon">
+                <div class="description__title">Описание</div>
+                <div class="description__text">{{ dragon_trans.description1 }}</div>
+            </div>
+            <div class="description__dragon">
+                <div class="description__title">Получение</div>
+                <div class="description__text">{{ dragon_trans.description2 }}</div>
+            </div>
+            <div class="description__dragon">
+                <div class="description__title">Выведение</div>
+                <div class="description__text">{{ dragon_trans.description3 }}</div>
             </div>
         </div>
     </div>

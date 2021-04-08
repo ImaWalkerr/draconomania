@@ -106,4 +106,4 @@ function checkTime(i) {
             startTime()
         }, 500);
     }
-    startTime();
+    startTime()

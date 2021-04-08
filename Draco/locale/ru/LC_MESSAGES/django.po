@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 18:05+0300\n"
+"POT-Creation-Date: 2021-04-07 23:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,6 +20,270 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: .\Draco\templates\Draco\homes.html:28
+#: .\Draco\templates\Draco\base.html:27 .\Draco\templates\Draco\homes.html:26
+#: .\Draco\templates\Draco\islands.html:26
+#: .\Draco\templates\Draco\main_page.html:27
+msgid "Главная"
+msgstr "Главная"
+
+#: .\Draco\templates\Draco\base.html:29 .\Draco\templates\Draco\homes.html:28
+#: .\Draco\templates\Draco\islands.html:28
+#: .\Draco\templates\Draco\main_page.html:29
 msgid "Коллекция"
+msgstr "Коллекция"
+
+#: .\Draco\templates\Draco\base.html:32 .\Draco\templates\Draco\homes.html:31
+#: .\Draco\templates\Draco\islands.html:31
+#: .\Draco\templates\Draco\main_page.html:32
+msgid "Драконы"
+msgstr "Драконы"
+
+#: .\Draco\templates\Draco\base.html:33 .\Draco\templates\Draco\homes.html:32
+#: .\Draco\templates\Draco\islands.html:32
+#: .\Draco\templates\Draco\main_page.html:33
+msgid "Жилища"
+msgstr "Жилища"
+
+#: .\Draco\templates\Draco\base.html:34 .\Draco\templates\Draco\homes.html:33
+#: .\Draco\templates\Draco\islands.html:33
+#: .\Draco\templates\Draco\main_page.html:34
+msgid "Острова"
+msgstr "Острова"
+
+#: .\Draco\templates\Draco\base.html:38 .\Draco\templates\Draco\homes.html:37
+#: .\Draco\templates\Draco\islands.html:37
+#: .\Draco\templates\Draco\main_page.html:38
+msgid "Ресурсы"
+msgstr "Ресурсы"
+
+#: .\Draco\templates\Draco\base.html:41 .\Draco\templates\Draco\homes.html:40
+#: .\Draco\templates\Draco\islands.html:40
+#: .\Draco\templates\Draco\main_page.html:41
+msgid "Элементы"
+msgstr "Элементы"
+
+#: .\Draco\templates\Draco\base.html:42 .\Draco\templates\Draco\homes.html:41
+#: .\Draco\templates\Draco\islands.html:41
+#: .\Draco\templates\Draco\main_page.html:42
+msgid "Символы"
+msgstr "Символы"
+
+#: .\Draco\templates\Draco\base.html:43 .\Draco\templates\Draco\homes.html:42
+#: .\Draco\templates\Draco\islands.html:42
+#: .\Draco\templates\Draco\main_page.html:43
+msgid "Еда"
+msgstr "Еда"
+
+#: .\Draco\templates\Draco\base.html:47 .\Draco\templates\Draco\homes.html:46
+#: .\Draco\templates\Draco\islands.html:46
+#: .\Draco\templates\Draco\main_page.html:47
+msgid "Справка"
+msgstr "Справка"
+
+#: .\Draco\templates\Draco\base.html:50 .\Draco\templates\Draco\homes.html:49
+#: .\Draco\templates\Draco\islands.html:49
+#: .\Draco\templates\Draco\main_page.html:50
+msgid "Калькулятор"
+msgstr "Калькулятор"
+
+#: .\Draco\templates\Draco\base.html:51 .\Draco\templates\Draco\homes.html:50
+#: .\Draco\templates\Draco\islands.html:50
+#: .\Draco\templates\Draco\main_page.html:51
+msgid "Добавить дракона"
+msgstr "Добавить дракона"
+
+#: .\Draco\templates\Draco\base.html:63 .\Draco\templates\Draco\homes.html:81
+#: .\Draco\templates\Draco\islands.html:81
+#: .\Draco\templates\Draco\main_page.html:63
+msgid "Профиль"
+msgstr "Профиль"
+
+#: .\Draco\templates\Draco\base.html:67 .\Draco\templates\Draco\homes.html:85
+#: .\Draco\templates\Draco\islands.html:85
+#: .\Draco\templates\Draco\main_page.html:67
+msgid "Форум"
+msgstr "Форум"
+
+#: .\Draco\templates\Draco\base.html:68 .\Draco\templates\Draco\homes.html:86
+#: .\Draco\templates\Draco\islands.html:86
+#: .\Draco\templates\Draco\main_page.html:68
+msgid "Магазин"
+msgstr "Магазин"
+
+#: .\Draco\templates\Draco\base.html:77 .\Draco\templates\Draco\homes.html:95
+#: .\Draco\templates\Draco\islands.html:95
+#: .\Draco\templates\Draco\main_page.html:77
+msgid "Корзина"
+msgstr "Корзина"
+
+#: .\Draco\templates\Draco\base.html:95 .\Draco\templates\Draco\homes.html:113
+#: .\Draco\templates\Draco\main_page.html:95
+msgid "Итого: "
+msgstr "Итого: "
+
+#: .\Draco\templates\Draco\base.html:98 .\Draco\templates\Draco\homes.html:116
+#: .\Draco\templates\Draco\islands.html:116
+#: .\Draco\templates\Draco\main_page.html:98
+msgid "Перейти в корзину"
+msgstr "Перейти в корзину"
+
+#: .\Draco\templates\Draco\base.html:111
+#: .\Draco\templates\Draco\homes.html:217
+#: .\Draco\templates\Draco\islands.html:217
+#: .\Draco\templates\Draco\main_page.html:166
+msgid "Пользовательское соглашение"
+msgstr "Пользовательское соглашение"
+
+#: .\Draco\templates\Draco\base.html:112
+#: .\Draco\templates\Draco\homes.html:218
+#: .\Draco\templates\Draco\islands.html:218
+#: .\Draco\templates\Draco\main_page.html:167
+msgid "О нас"
+msgstr "О нас"
+
+#: .\Draco\templates\Draco\base.html:113
+#: .\Draco\templates\Draco\homes.html:219
+#: .\Draco\templates\Draco\islands.html:219
+#: .\Draco\templates\Draco\main_page.html:168
+msgid "Контакты"
+msgstr "Контакты"
+
+#: .\Draco\templates\Draco\base.html:117
+msgid " "
 msgstr ""
+
+#: .\Draco\templates\Draco\base.html:124
+#: .\Draco\templates\Draco\homes.html:230
+#: .\Draco\templates\Draco\islands.html:230
+#: .\Draco\templates\Draco\main_page.html:179
+msgid "Оформление заказа"
+msgstr "Оформление заказа"
+
+#: .\Draco\templates\Draco\base.html:125
+#: .\Draco\templates\Draco\homes.html:231
+#: .\Draco\templates\Draco\islands.html:231
+#: .\Draco\templates\Draco\main_page.html:180
+msgid "Заказ № 3456"
+msgstr "Заказ № 3456"
+
+#: .\Draco\templates\Draco\base.html:128
+msgid "Товаров в заказе:"
+msgstr "Товаров в заказе:"
+
+#: .\Draco\templates\Draco\base.html:129
+#: .\Draco\templates\Draco\main_page.html:184
+msgid "Общая сумма заказа:"
+msgstr "Общая сумма заказа:"
+
+#: .\Draco\templates\Draco\base.html:131
+#: .\Draco\templates\Draco\homes.html:237
+#: .\Draco\templates\Draco\islands.html:237
+#: .\Draco\templates\Draco\main_page.html:186
+msgid "Состав заказа"
+msgstr "Состав заказа"
+
+#: .\Draco\templates\Draco\base.html:137
+#: .\Draco\templates\Draco\homes.html:243
+#: .\Draco\templates\Draco\islands.html:243
+#: .\Draco\templates\Draco\main_page.html:192
+msgid "Ваше имя"
+msgstr "Ваше имя"
+
+#: .\Draco\templates\Draco\base.html:141
+#: .\Draco\templates\Draco\homes.html:247
+#: .\Draco\templates\Draco\islands.html:247
+#: .\Draco\templates\Draco\main_page.html:196
+msgid "Номер телефона"
+msgstr "Номер телефона"
+
+#: .\Draco\templates\Draco\base.html:145
+#: .\Draco\templates\Draco\homes.html:251
+#: .\Draco\templates\Draco\islands.html:251
+#: .\Draco\templates\Draco\main_page.html:200
+msgid "Электронная почта"
+msgstr "Электронная почта"
+
+#: .\Draco\templates\Draco\base.html:148
+#: .\Draco\templates\Draco\homes.html:254
+#: .\Draco\templates\Draco\islands.html:254
+#: .\Draco\templates\Draco\main_page.html:203
+msgid "Оформить заказ"
+msgstr "Оформить заказ"
+
+#: .\Draco\templates\Draco\homes.html:54
+#: .\Draco\templates\Draco\islands.html:54
+msgid "Навигация"
+msgstr "Навигация"
+
+#: .\Draco\templates\Draco\homes.html:57
+msgid "Огонь"
+msgstr "Огонь"
+
+#: .\Draco\templates\Draco\homes.html:58
+msgid "Ветер"
+msgstr "Ветер"
+
+#: .\Draco\templates\Draco\homes.html:59
+msgid "Земля"
+msgstr "Земля"
+
+#: .\Draco\templates\Draco\homes.html:60
+msgid "Вода"
+msgstr "Вода"
+
+#: .\Draco\templates\Draco\homes.html:61
+msgid "Зелень"
+msgstr "Зелень"
+
+#: .\Draco\templates\Draco\homes.html:62
+msgid "Металл"
+msgstr "Металл"
+
+#: .\Draco\templates\Draco\homes.html:63
+msgid "Энергия"
+msgstr "Энергия"
+
+#: .\Draco\templates\Draco\homes.html:64
+msgid "Пустота"
+msgstr "Пустота"
+
+#: .\Draco\templates\Draco\homes.html:65
+msgid "Свет"
+msgstr "Свет"
+
+#: .\Draco\templates\Draco\homes.html:66
+msgid "Тень"
+msgstr "Тень"
+
+#: .\Draco\templates\Draco\homes.html:67
+msgid "Легенда"
+msgstr "Легенда"
+
+#: .\Draco\templates\Draco\homes.html:68
+msgid "Божество"
+msgstr "Божество"
+
+#: .\Draco\templates\Draco\homes.html:69
+msgid "Древняя"
+msgstr "Древняя"
+
+#: .\Draco\templates\Draco\homes.html:223
+#: .\Draco\templates\Draco\islands.html:223
+#: .\Draco\templates\Draco\main_page.html:172
+msgid "МСК"
+msgstr "МСК"
+
+#: .\Draco\templates\Draco\homes.html:234
+#: .\Draco\templates\Draco\islands.html:234
+#: .\Draco\templates\Draco\main_page.html:183
+msgid "Товаров в заказе: "
+msgstr "Товаров в заказе: "
+
+#: .\Draco\templates\Draco\homes.html:235
+#: .\Draco\templates\Draco\islands.html:235
+msgid "Общая сумма заказа: "
+msgstr "Общая сумма заказа:"
+
+#: .\Draco\templates\Draco\islands.html:113
+msgid "Итого:"
+msgstr "Итого:"
