@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-04-07 23:10+0300\n"
+"POT-Creation-Date: 2021-04-15 19:24+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\Draco\templates\Draco\base.html:20
+msgid "Логотип"
+msgstr "Logo"
 
 #: .\Draco\templates\Draco\base.html:27 .\Draco\templates\Draco\homes.html:26
 #: .\Draco\templates\Draco\islands.html:26
@@ -33,6 +37,8 @@ msgstr "Collection"
 #: .\Draco\templates\Draco\base.html:32 .\Draco\templates\Draco\homes.html:31
 #: .\Draco\templates\Draco\islands.html:31
 #: .\Draco\templates\Draco\main_page.html:32
+#: .\Draco\templates\Draco\main_page.html:120
+#: .\Draco\templates\Draco\main_page.html:170
 msgid "Драконы"
 msgstr "Dragons"
 
@@ -90,123 +96,333 @@ msgstr "Calculator"
 msgid "Добавить дракона"
 msgstr "Add dragon"
 
-#: .\Draco\templates\Draco\base.html:63 .\Draco\templates\Draco\homes.html:81
+#: .\Draco\templates\Draco\base.html:64 .\Draco\templates\Draco\base.html:73
+#: .\Draco\templates\Draco\homes.html:81
 #: .\Draco\templates\Draco\islands.html:81
-#: .\Draco\templates\Draco\main_page.html:63
+#: .\Draco\templates\Draco\main_page.html:64
+#: .\Draco\templates\Draco\main_page.html:73
 msgid "Профиль"
 msgstr "Profile"
 
-#: .\Draco\templates\Draco\base.html:67 .\Draco\templates\Draco\homes.html:85
+#: .\Draco\templates\Draco\base.html:68 .\Draco\templates\Draco\base.html:77
+#: .\Draco\templates\Draco\homes.html:85
 #: .\Draco\templates\Draco\islands.html:85
-#: .\Draco\templates\Draco\main_page.html:67
+#: .\Draco\templates\Draco\main_page.html:68
+#: .\Draco\templates\Draco\main_page.html:77
 msgid "Форум"
 msgstr "Forum"
 
-#: .\Draco\templates\Draco\base.html:68 .\Draco\templates\Draco\homes.html:86
+#: .\Draco\templates\Draco\base.html:69 .\Draco\templates\Draco\base.html:78
+#: .\Draco\templates\Draco\homes.html:86
 #: .\Draco\templates\Draco\islands.html:86
-#: .\Draco\templates\Draco\main_page.html:68
+#: .\Draco\templates\Draco\main_page.html:69
+#: .\Draco\templates\Draco\main_page.html:78
 msgid "Магазин"
 msgstr "Store"
 
-#: .\Draco\templates\Draco\base.html:77 .\Draco\templates\Draco\homes.html:95
+#: .\Draco\templates\Draco\base.html:70
+#: .\Draco\templates\Draco\main_page.html:70
+msgid "Выйти"
+msgstr "Log out"
+
+#: .\Draco\templates\Draco\base.html:76
+msgid "Гость онлайн"
+msgstr "Guest online"
+
+#: .\Draco\templates\Draco\base.html:79
+#: .\Draco\templates\Draco\main_page.html:79
+msgid "Регистрация / Войти"
+msgstr "Register / Log in"
+
+#: .\Draco\templates\Draco\base.html:88 .\Draco\templates\Draco\homes.html:95
 #: .\Draco\templates\Draco\islands.html:95
-#: .\Draco\templates\Draco\main_page.html:77
+#: .\Draco\templates\Draco\main_page.html:88
 msgid "Корзина"
 msgstr "Cart"
 
-#: .\Draco\templates\Draco\base.html:95 .\Draco\templates\Draco\homes.html:113
-#: .\Draco\templates\Draco\main_page.html:95
+#: .\Draco\templates\Draco\base.html:106
+#: .\Draco\templates\Draco\homes.html:113
+#: .\Draco\templates\Draco\main_page.html:106
 msgid "Итого: "
 msgstr "Total"
 
-#: .\Draco\templates\Draco\base.html:98 .\Draco\templates\Draco\homes.html:116
+#: .\Draco\templates\Draco\base.html:109
+#: .\Draco\templates\Draco\homes.html:116
 #: .\Draco\templates\Draco\islands.html:116
-#: .\Draco\templates\Draco\main_page.html:98
+#: .\Draco\templates\Draco\main_page.html:109
 msgid "Перейти в корзину"
 msgstr "Go to cart"
 
-#: .\Draco\templates\Draco\base.html:111
+#: .\Draco\templates\Draco\base.html:122
 #: .\Draco\templates\Draco\homes.html:217
 #: .\Draco\templates\Draco\islands.html:217
-#: .\Draco\templates\Draco\main_page.html:166
+#: .\Draco\templates\Draco\main_page.html:238
 msgid "Пользовательское соглашение"
 msgstr "Terms of use"
 
-#: .\Draco\templates\Draco\base.html:112
+#: .\Draco\templates\Draco\base.html:123
 #: .\Draco\templates\Draco\homes.html:218
 #: .\Draco\templates\Draco\islands.html:218
-#: .\Draco\templates\Draco\main_page.html:167
+#: .\Draco\templates\Draco\main_page.html:239
 msgid "О нас"
 msgstr "About us"
 
-#: .\Draco\templates\Draco\base.html:113
+#: .\Draco\templates\Draco\base.html:124
 #: .\Draco\templates\Draco\homes.html:219
 #: .\Draco\templates\Draco\islands.html:219
-#: .\Draco\templates\Draco\main_page.html:168
+#: .\Draco\templates\Draco\main_page.html:240
 msgid "Контакты"
 msgstr "Contacts"
 
-#: .\Draco\templates\Draco\base.html:117
-msgid " "
-msgstr ""
+#: .\Draco\templates\Draco\base.html:125
+#: .\Draco\templates\Draco\main_page.html:241
+msgid "2021, All website content subjected to copyright"
+msgstr "2021, All website content subjected to copyright"
 
-#: .\Draco\templates\Draco\base.html:124
+#: .\Draco\templates\Draco\base.html:128
+#: .\Draco\templates\Draco\homes.html:223
+#: .\Draco\templates\Draco\islands.html:223
+#: .\Draco\templates\Draco\main_page.html:244
+msgid "МСК"
+msgstr "MSC"
+
+#: .\Draco\templates\Draco\base.html:135
 #: .\Draco\templates\Draco\homes.html:230
 #: .\Draco\templates\Draco\islands.html:230
-#: .\Draco\templates\Draco\main_page.html:179
+#: .\Draco\templates\Draco\main_page.html:251
 msgid "Оформление заказа"
 msgstr "Place your order"
 
-#: .\Draco\templates\Draco\base.html:125
+#: .\Draco\templates\Draco\base.html:136
 #: .\Draco\templates\Draco\homes.html:231
 #: .\Draco\templates\Draco\islands.html:231
-#: .\Draco\templates\Draco\main_page.html:180
+#: .\Draco\templates\Draco\main_page.html:252
 msgid "Заказ № 3456"
 msgstr "Order № 3456"
 
-#: .\Draco\templates\Draco\base.html:128
+#: .\Draco\templates\Draco\base.html:139
 msgid "Товаров в заказе:"
 msgstr "Items in order:"
 
-#: .\Draco\templates\Draco\base.html:129
-#: .\Draco\templates\Draco\main_page.html:184
+#: .\Draco\templates\Draco\base.html:140
+#: .\Draco\templates\Draco\main_page.html:256
 msgid "Общая сумма заказа:"
 msgstr "The total amount of the order:"
 
-#: .\Draco\templates\Draco\base.html:131
+#: .\Draco\templates\Draco\base.html:142
 #: .\Draco\templates\Draco\homes.html:237
 #: .\Draco\templates\Draco\islands.html:237
-#: .\Draco\templates\Draco\main_page.html:186
+#: .\Draco\templates\Draco\main_page.html:258
 msgid "Состав заказа"
 msgstr "Order list"
 
-#: .\Draco\templates\Draco\base.html:137
+#: .\Draco\templates\Draco\base.html:148
 #: .\Draco\templates\Draco\homes.html:243
 #: .\Draco\templates\Draco\islands.html:243
-#: .\Draco\templates\Draco\main_page.html:192
+#: .\Draco\templates\Draco\main_page.html:264
 msgid "Ваше имя"
 msgstr "Your name"
 
-#: .\Draco\templates\Draco\base.html:141
+#: .\Draco\templates\Draco\base.html:152
 #: .\Draco\templates\Draco\homes.html:247
 #: .\Draco\templates\Draco\islands.html:247
-#: .\Draco\templates\Draco\main_page.html:196
+#: .\Draco\templates\Draco\main_page.html:268
 msgid "Номер телефона"
 msgstr "Phone number"
 
-#: .\Draco\templates\Draco\base.html:145
+#: .\Draco\templates\Draco\base.html:156
 #: .\Draco\templates\Draco\homes.html:251
 #: .\Draco\templates\Draco\islands.html:251
-#: .\Draco\templates\Draco\main_page.html:200
+#: .\Draco\templates\Draco\main_page.html:272
 msgid "Электронная почта"
 msgstr "Email"
 
-#: .\Draco\templates\Draco\base.html:148
+#: .\Draco\templates\Draco\base.html:159
 #: .\Draco\templates\Draco\homes.html:254
 #: .\Draco\templates\Draco\islands.html:254
-#: .\Draco\templates\Draco\main_page.html:203
+#: .\Draco\templates\Draco\main_page.html:275
 msgid "Оформить заказ"
 msgstr "Place your order"
+
+#: .\Draco\templates\Draco\base.html:167 .\Draco\templates\Draco\base.html:176
+#: .\Draco\templates\Draco\base.html:185 .\Draco\templates\Draco\base.html:194
+#: .\Draco\templates\Draco\base.html:203
+#: .\Draco\templates\Draco\main_page.html:283
+#: .\Draco\templates\Draco\main_page.html:292
+#: .\Draco\templates\Draco\main_page.html:301
+#: .\Draco\templates\Draco\main_page.html:310
+#: .\Draco\templates\Draco\main_page.html:319
+msgid "Закрыть окно"
+msgstr "Close page"
+
+#: .\Draco\templates\Draco\draconomania_store.html:14
+#: .\Draco\templates\Draco\dragons_catalog.html:14
+msgid "Поиск"
+msgstr "Search"
+
+#: .\Draco\templates\Draco\draconomania_store.html:15
+#: .\Draco\templates\Draco\dragons_catalog.html:15
+msgid "Найти"
+msgstr "Search"
+
+#: .\Draco\templates\Draco\draconomania_store.html:18
+msgid "Каталог товаров"
+msgstr "Catalog"
+
+#: .\Draco\templates\Draco\draconomania_store.html:27
+#: .\Draco\templates\Draco\dragons.html:20
+#: .\Draco\templates\Draco\dragons.html:27
+#: .\Draco\templates\Draco\dragons.html:34
+#: .\Draco\templates\Draco\dragons_catalog.html:27
+msgid "Редкость"
+msgstr "Rarity"
+
+#: .\Draco\templates\Draco\draconomania_store.html:32
+#: .\Draco\templates\Draco\dragons_catalog.html:32
+msgid "Форма дракона 1"
+msgstr "Dragon form 1"
+
+#: .\Draco\templates\Draco\draconomania_store.html:37
+#: .\Draco\templates\Draco\dragons_catalog.html:37
+msgid "Форма дракона 2"
+msgstr "Dragon form 2"
+
+#: .\Draco\templates\Draco\draconomania_store.html:42
+#: .\Draco\templates\Draco\dragons_catalog.html:42
+msgid "Форма дракона 3"
+msgstr "Dragon form 3"
+
+#: .\Draco\templates\Draco\draconomania_store.html:49
+msgid "Набор:"
+msgstr "Set:"
+
+#: .\Draco\templates\Draco\draconomania_store.html:60
+msgid "рейтинг набора"
+msgstr "set rating"
+
+#: .\Draco\templates\Draco\draconomania_store.html:63
+msgid "Ограничение: 1 набор/день"
+msgstr "Limit: 1 set per day"
+
+#: .\Draco\templates\Draco\draconomania_store.html:64
+msgid "Количество: 1шт"
+msgstr "Quantity: 1 set"
+
+#: .\Draco\templates\Draco\draconomania_store.html:68
+msgid "Новая цена:"
+msgstr "New price:"
+
+#: .\Draco\templates\Draco\draconomania_store.html:72
+msgid "Старая цена:"
+msgstr "Old price:"
+
+#: .\Draco\templates\Draco\draconomania_store.html:76
+msgid "Добавить в корзину"
+msgstr "Add in cart"
+
+#: .\Draco\templates\Draco\dragons.html:12
+msgid "Коллекция Дракономании / Дракон"
+msgstr "Dragon Mania Legends collection / Dragon"
+
+#: .\Draco\templates\Draco\dragons.html:17
+msgid "Форма яйца"
+msgstr "Egg form"
+
+#: .\Draco\templates\Draco\dragons.html:18
+msgid "Яйцо"
+msgstr "Egg"
+
+#: .\Draco\templates\Draco\dragons.html:24
+msgid "Форма детеныша"
+msgstr "Child form"
+
+#: .\Draco\templates\Draco\dragons.html:25
+msgid "Детеныш"
+msgstr "Child"
+
+#: .\Draco\templates\Draco\dragons.html:31
+#, fuzzy
+#| msgid "Форма дракона 1"
+msgid "Форма взрослого"
+msgstr "Adult form"
+
+#: .\Draco\templates\Draco\dragons.html:32
+msgid "Взрослый"
+msgstr "Adult"
+
+#: .\Draco\templates\Draco\dragons.html:41
+msgid "Уровень 1"
+msgstr "Level 1"
+
+#: .\Draco\templates\Draco\dragons.html:43
+#: .\Draco\templates\Draco\dragons.html:44
+msgid "Атака"
+msgstr "Attack"
+
+#: .\Draco\templates\Draco\dragons.html:48
+#: .\Draco\templates\Draco\dragons.html:49
+msgid "Здоровье"
+msgstr "Hp"
+
+#: .\Draco\templates\Draco\dragons.html:53
+#: .\Draco\templates\Draco\dragons.html:54
+msgid "Золото/час"
+msgstr "Gold per hour"
+
+#: .\Draco\templates\Draco\dragons.html:58
+#: .\Draco\templates\Draco\dragons.html:59
+msgid "Опыт за разведение"
+msgstr "Breeding exp"
+
+#: .\Draco\templates\Draco\dragons.html:63
+#: .\Draco\templates\Draco\dragons.html:64
+msgid "Золото за продажу"
+msgstr "Gold from sale"
+
+#: .\Draco\templates\Draco\dragons.html:68
+#: .\Draco\templates\Draco\dragons.html:69
+msgid "Очки выведения"
+msgstr "Removal points"
+
+#: .\Draco\templates\Draco\dragons.html:78
+msgid "Описание"
+msgstr "Description"
+
+#: .\Draco\templates\Draco\dragons.html:82
+msgid "Получение"
+msgstr "Obtaining"
+
+#: .\Draco\templates\Draco\dragons.html:86
+msgid "Выведение"
+msgstr "Breeding"
+
+#: .\Draco\templates\Draco\dragons_catalog.html:18
+msgid "Коллекция Дракономании"
+msgstr "Dragon Mania Legends collection"
+
+#: .\Draco\templates\Draco\dragons_catalog.html:60
+msgid "рейтинг дракона"
+msgstr "dragon rating"
+
+#: .\Draco\templates\Draco\dragons_catalog.html:63
+msgid "Редкость:"
+msgstr "Rarity:"
+
+#: .\Draco\templates\Draco\dragons_catalog.html:66
+msgid "Стихии:"
+msgstr "Elements:"
+
+#: .\Draco\templates\Draco\dragons_catalog.html:67
+msgid "Главная стихия"
+msgstr "Main element"
+
+#: .\Draco\templates\Draco\dragons_catalog.html:68
+msgid "Вторая стихия"
+msgstr "Second element"
+
+#: .\Draco\templates\Draco\dragons_catalog.html:69
+msgid "Третья стихия"
+msgstr "Third element"
 
 #: .\Draco\templates\Draco\homes.html:54
 #: .\Draco\templates\Draco\islands.html:54
@@ -265,15 +481,9 @@ msgstr "God"
 msgid "Древняя"
 msgstr "Ancient"
 
-#: .\Draco\templates\Draco\homes.html:223
-#: .\Draco\templates\Draco\islands.html:223
-#: .\Draco\templates\Draco\main_page.html:172
-msgid "МСК"
-msgstr "MSC"
-
 #: .\Draco\templates\Draco\homes.html:234
 #: .\Draco\templates\Draco\islands.html:234
-#: .\Draco\templates\Draco\main_page.html:183
+#: .\Draco\templates\Draco\main_page.html:255
 msgid "Товаров в заказе: "
 msgstr "Items in order:"
 
@@ -285,3 +495,46 @@ msgstr "The total amount of the order:"
 #: .\Draco\templates\Draco\islands.html:113
 msgid "Итого:"
 msgstr "Total:"
+
+#: .\Draco\templates\Draco\main_page.html:118
+msgid "Об игре"
+msgstr "About game"
+
+#: .\Draco\templates\Draco\main_page.html:119
+#: .\Draco\templates\Draco\main_page.html:150
+msgid "Геймплей"
+msgstr "Gameplay"
+
+#: .\Draco\templates\Draco\main_page.html:121
+#: .\Draco\templates\Draco\main_page.html:190
+msgid "Сражения"
+msgstr "Battles"
+
+#: .\Draco\templates\Draco\main_page.html:122
+#: .\Draco\templates\Draco\main_page.html:210
+msgid "Итог"
+msgstr "Conclusions"
+
+#: .\Draco\templates\Draco\main_page.html:130
+msgid "Добро пожаловать в Легенды Дракономании!"
+msgstr "Welcome to Dragon Mania Legends!"
+
+#: .\Draco\templates\Draco\main_page.html:144
+msgid "Слайд 1"
+msgstr "Slide 1"
+
+#: .\Draco\templates\Draco\main_page.html:164
+msgid "Слайд 2"
+msgstr "Slide 2"
+
+#: .\Draco\templates\Draco\main_page.html:184
+msgid "Слайд 3"
+msgstr "Slide 3"
+
+#: .\Draco\templates\Draco\main_page.html:204
+msgid "Слайд 4"
+msgstr "Slide 4"
+
+#: .\Draco\templates\Draco\main_page.html:224
+msgid "Слайд 5"
+msgstr "Slide 5"

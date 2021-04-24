@@ -34,6 +34,7 @@ class Dragon(models.Model):
     exp = models.IntegerField('Опыт за получение', default=0)
     sale = models.IntegerField('Продажа', default=0)
     points = models.IntegerField('Очки за сбор', default=0)
+    background = models.ImageField('Задний фон карточек', upload_to="web_media/other/")
     usual_pic = models.ImageField('Обычный редкость', upload_to="web_media/info/")
 
     class Meta:
@@ -62,8 +63,21 @@ class DragonTranslation(models.Model):
         verbose_name_plural = 'Драконы перевод'
 
 
+class TextStatsTranslation(models.Model):
+    """Текстовая информация сайта"""
+    text = models.CharField('Информация', max_length=5000)
+    language = models.CharField('Язык', max_length=2)
+
+    def __str__(self):
+        return self.text
+
+    class Meta:
+        verbose_name = 'Текстовая информация сайта'
+        verbose_name_plural = 'Текстовая информация сайта'
+
+
 class PicturesStats(models.Model):
-    """Картинки характеристики"""
+    """Картинки для таблиц"""
     pictures = models.CharField('Название картинки', max_length=20)
     attack_pic = models.ImageField('Атака', upload_to="web_media/elements/")
     hp_pic = models.ImageField('Здоровье', upload_to="web_media/elements/")
@@ -76,8 +90,29 @@ class PicturesStats(models.Model):
         return self.pictures
 
     class Meta:
-        verbose_name = 'Картинки характеристики'
-        verbose_name_plural = 'Картинки характеристик'
+        verbose_name = 'Картинки для таблицы'
+        verbose_name_plural = 'Картинки для таблиц'
+
+
+class ElementsHomes(models.Model):
+    """Стихии для страницы жилища"""
+    element_1 = models.ImageField('Стихия огонь', upload_to="web_media/elements/")
+    element_2 = models.ImageField('Стихия ветер', upload_to="web_media/elements/")
+    element_3 = models.ImageField('Стихия земля', upload_to="web_media/elements/")
+    element_4 = models.ImageField('Стихия вода', upload_to="web_media/elements/")
+    element_5 = models.ImageField('Стихия отрава', upload_to="web_media/elements/")
+    element_6 = models.ImageField('Стихия металл', upload_to="web_media/elements/")
+    element_7 = models.ImageField('Стихия энергия', upload_to="web_media/elements/")
+    element_8 = models.ImageField('Стихия пустота', upload_to="web_media/elements/")
+    element_9 = models.ImageField('Стихия свет', upload_to="web_media/elements/")
+    element_10 = models.ImageField('Стихия тень', upload_to="web_media/elements/")
+    element_11 = models.ImageField('Стихия легенда', upload_to="web_media/elements/")
+    element_12 = models.ImageField('Стихия божество', upload_to="web_media/elements/")
+    element_13 = models.ImageField('Стихия древняя', upload_to="web_media/elements/")
+
+    class Meta:
+        verbose_name = 'Стихия для страницы жилища'
+        verbose_name_plural = 'Стихии для страницы жилища'
 
 
 class Elements(models.Model):

@@ -193,10 +193,10 @@
 .product__title {
     font-family: var(--font-family-main);
     font-weight: 400;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 20px;
     color: var(--color-black);
-    margin: 10px 20px 0 20px;
+    margin: 5px 20px 0 20px;
     text-align: left;
 }
 
@@ -229,14 +229,14 @@
 
 .product__testimonials {
     font-family: var(--font-family-main);
-    font-size: 16px;
+    font-size: 15px;
     color: var(--color-black);
-    margin: 5px;
+    margin: 5px 0 0 0;
 }
 
 .product__info {
     font-family: var(--font-family-main);
-    font-size: 16px;
+    font-size: 15px;
     color: var(--color-black);
     margin: 0 10px;
 }
@@ -261,7 +261,20 @@
 .product__price {
     display: flex;
     align-items: center;
-    margin: 0 20px;
+}
+
+.price__current p{
+    font-family: var(--font-family-main);
+    font-size: 15px;
+    color: var(--color-black);
+    margin: 5px 0 0 20px;
+}
+
+.price__old p{
+    font-family: var(--font-family-main);
+    font-size: 15px;
+    color: var(--color-black);
+    margin: 5px 5px 0 0;
 }
 
 .product__dragon_elements img {
@@ -274,23 +287,24 @@
 
 .product-price__current {
     font-family: var(--font-family-main);
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-red);
-    margin: 0 25px 0 0;
+    margin: 5px 25px 0 0;
 }
 
 .product-dragon__about {
     font-family: var(--font-family-main);
     font-size: 20px;
     color: var(--color-black);
-    margin: 0 15px 0 0;
+    margin: 0 10px 0 0;
 }
 
 .product-price__old {
     font-family: var(--font-family-main);
-    font-size: 16px;
+    font-size: 14px;
     color: var(--color-darkgrey);
     text-decoration: line-through;
+    margin: 5px 25px 0 0;
 }
 
 .product__btn {
@@ -316,4 +330,12 @@
 .product__btn:disabled {
     opacity: 0.4;
     pointer-events: none;
+}
+
+.dragon-title {
+    margin: 15px 20px 0 20px;
+}
+
+.dragon-catalog {
+    margin: 0 20px;
 }

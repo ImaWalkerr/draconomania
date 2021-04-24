@@ -70,25 +70,15 @@ input,button,textarea {font-family: inherit;}
 }
 
 .page__img_1 {
-    background: url("/media/web_media/info/1_right.png") no-repeat center;
+    background: url("/media/web_media/other/fire_right.png") no-repeat center;
     background-size: cover;
 }
 
 .page__img_2 {
-    background: url("/media/web_media/info/1_left.png") no-repeat center;
+    background: url("/media/web_media/other/fire_left.png") no-repeat center;
     background-size: cover;
     transition: 0.5s;
-    clip-path: polygon(0 0, 100% 0, 112% 0, 0 100%);
-}
-
-.page__img_2:hover ~ .page__text {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 15px;
-}
-
-.page__img_2:hover ~ .page__title {
-    background-color: rgba(0, 0, 0, 0.2);
-    padding: 7.5px;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 100%);
 }
 
 .page__img_1:hover ~ .page__img_2 {
@@ -97,13 +87,6 @@ input,button,textarea {font-family: inherit;}
 
 .page__img_2:hover {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
-.page__img_home img {
-    position: absolute;
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
 }
 
 .page__img_3 {
@@ -160,4 +143,56 @@ input,button,textarea {font-family: inherit;}
 
 .page__img_6:hover {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+#grid__homes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    width: 1400px;
+    grid-gap: 2vw;
+    position: absolute;
+    z-index: 2;
+}
+
+/*.page__title h1 {
+    position: absolute;
+    font-family: var(--font-family-main);
+    font-weight: 400;
+    font-size: 25px;
+    color: var(--color-white);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 20px;
+    z-index: 2;
+}
+
+.page__sub-title {
+    position: absolute;
+    font-family: var(--font-family-main);
+    font-weight: 400;
+    font-size: 22px;
+    color: var(--color-white);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 20px;
+    z-index: 2;
+}
+
+.page__text {
+    position: absolute;
+    font-family: var(--font-family-main);
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--color-white);
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    margin: 40px 20px;
+    z-index: 2;
+}
+*/
+
+.page__image img {
+    width: 240px;
+    height: 240px;
+    object-fit: cover;
 }

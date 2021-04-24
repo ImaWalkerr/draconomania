@@ -11,11 +11,13 @@ import re
 
 
 def base(request):
+    main_page_text = TextStatsTranslation.objects.filter(language=request.LANGUAGE_CODE)
     dragon_test = Dragon.objects.all()
     return render(request, 'Draco/base.html',
                   {
-                    'title': 'ТЕСТ шапка',
-                    'dragon_test': dragon_test
+                      'title': 'ТЕСТ шапка',
+                      'main_page_text': main_page_text,
+                      'dragon_test': dragon_test
                   })
 
 
@@ -23,23 +25,25 @@ def main_page(request):
     main_pages = MainPageTranslation.objects.filter(language=request.LANGUAGE_CODE)
     return render(request, 'Draco/main_page.html',
                   {
-                    'title': 'Главная страница',
-                    'main_pages': main_pages,
-                    'wide': True
+                      'title': 'Главная страница',
+                      'main_pages': main_pages,
+                      'wide': True
                   })
 
 
 def homes(request):
+    elements_homes = ElementsHomes.objects.all()
     return render(request, 'Draco/homes.html',
                   {
-                    'title': 'Жилища'
+                      'title': 'Жилища',
+                      'elements_homes': elements_homes,
                   })
 
 
 def islands(request):
     return render(request, 'Draco/islands.html',
                   {
-                    'title': 'Острова'
+                      'title': 'Острова'
                   })
 
 
@@ -60,18 +64,24 @@ def dragon_list(request):
                                                         Q(rarity__icontains=search_query))
     else:
         dragon_trans = DragonTranslation.objects.filter(language=request.LANGUAGE_CODE)
-    return render(request, 'Draco/dragons_catalog.html', {'search_query': search_query, 'dragons': dragon_trans})
+    return render(request, 'Draco/dragons_catalog.html',
+                  {
+                      'search_query': search_query,
+                      'dragons_trans': dragon_trans
+                  })
 
 
 def dragons(request):
     id = request.GET["id"]
     dragon = Dragon.objects.filter(id=id)[0]
     dragon_trans = DragonTranslation.objects.filter(dragon=dragon, language=request.LANGUAGE_CODE)[0]
+    pic_for_tables = PicturesStats.objects.all()
     return render(request, 'Draco/dragons.html',
                   {
                       'title': 'Драконы',
                       'dragon': dragon,
                       'dragon_trans': dragon_trans,
+                      'pic_for_tables': pic_for_tables
                   })
 
 

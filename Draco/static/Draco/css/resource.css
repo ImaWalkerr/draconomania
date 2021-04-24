@@ -97,6 +97,9 @@
 }
 
 .table__image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--font-family-main);
     font-size: 18px;
     font-weight: 400;
@@ -116,10 +119,10 @@
 }
 
 .table__image img {
-    width: 70px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: contain;
-    margin: 0 40%;
+    margin: 0 15px;
     padding: 3px 0 0 0;
 }
 

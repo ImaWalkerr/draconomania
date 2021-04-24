@@ -11,20 +11,34 @@ class MainPageTranslationAdmin(admin.ModelAdmin):
 @admin.register(Dragon)
 class PICAdmin(admin.ModelAdmin):
     list_display = ("id", "image1", "image2", "image3", "element1", "element2", "element3", "dmg", "hp", "gold", "exp",
-                    "sale", "points", "rating", "usual_pic")
+                    "sale", "points", "rating", "usual_pic", "background")
     list_display_links = ("id",)
 
 
 @admin.register(DragonTranslation)
 class DragonTranslationAdmin(admin.ModelAdmin):
-    list_display = ("name", "rarity", "description1", "description2", "description3", "el1", "el2", "el3", "dragon", "language")
+    list_display = ("name", "rarity", "description1", "description2", "description3", "el1", "el2", "el3", "dragon",
+                    "language")
     list_display_links = ("name",)
+
+
+@admin.register(TextStatsTranslation)
+class TextStatsTranslationAdmin(admin.ModelAdmin):
+    list_display = ("text", "language")
+    list_display_links = ("text",)
 
 
 @admin.register(PicturesStats)
 class PicturesStatsAdmin(admin.ModelAdmin):
     list_display = ("pictures", "attack_pic", "hp_pic", "gold_pic", "xp_pic", "sale_pic", "points_pic")
     list_display_links = ("pictures",)
+
+
+@admin.register(ElementsHomes)
+class ElementsHomesAdmin(admin.ModelAdmin):
+    list_display = ("id", "element_1", "element_2", "element_3", "element_4", "element_5", "element_6", "element_7",
+                    "element_8", "element_9", "element_10", "element_11", "element_12", "element_13")
+    list_display_links = ("id",)
 
 
 @admin.register(Elements)

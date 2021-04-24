@@ -5,16 +5,17 @@
 {% endblock %}
 
 {% block content %}
+    {% load i18n %}
     <div class="wrapper__dragons_catalog">
         <div class="collection">
             <div class="collection__header">
                 <div class="collection__search">
                     <form class="form-inline" action="dragon_list">
-                        <input class="form-control dragons__search" type="search" name="search" placeholder="Поиск" aria-label="Поиск">
-                        <button class="dragons__search-btn" type="submit">Найти</button>
+                        <input class="form-control dragons__search" type="search" name="search" placeholder={%  trans "Поиск" %} aria-label={%  trans "Поиск" %}>
+                        <button class="dragons__search-btn" type="submit">{%  trans "Найти" %}</button>
                     </form>
                 </div>
-                <h3 class="collection__title">Коллекция Дракономании</h3>
+                <a href="/" class="collection__title">{%  trans "Коллекция Дракономании" %}</a>
             </div>
         </div>
         <div class="collection__carts">
@@ -23,29 +24,29 @@
                 <div class="product__background">
                 <a href="dragons?id={{ el.dragon.id }}" class="product__image">
                     <div class="product__rarity">
-                        <img src="{{ el.dragon.usual_pic.url }}" alt="Редкость">
+                        <img src="{{ el.dragon.usual_pic.url }}" alt={%  trans "Редкость" %}>
                     </div>
                     <div class="product__switch image-switch">
                         <div class="image-switch__item">
                             <div class="image-switch__img">
-                                <img src="{{ el.dragon.image1.url }}" alt="Форма дракона 1">
+                                <img src="{{ el.dragon.image1.url }}" alt={%  trans "Форма дракона 1" %}>
                             </div>
                         </div>
                         <div class="image-switch__item">
                             <div class="image-switch__img">
-                                <img src="{{ el.dragon.image2.url }}" alt="Форма дракона 2">
+                                <img src="{{ el.dragon.image2.url }}" alt={%  trans "Форма дракона 2" %}>
                             </div>
                         </div>
                         <div class="image-switch__item">
                             <div class="image-switch__img">
-                                <img src="{{ el.dragon.image3.url }}" alt="Форма дракона 3">
+                                <img src="{{ el.dragon.image3.url }}" alt={%  trans "Форма дракона 3" %}>
                             </div>
                         </div>
                     </div>
                     <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
                 </a>
-                <h3 class="product__title">
-                    <a href="">{{ el.name }}</a>
+                <h3 class="product__title dragon-title">
+                    <a href="dragons?id={{ el.dragon.id }}">{{ el.name }}</a>
                 </h3>
                 <div class="product__props">
                     <span class="product__rating">
@@ -56,16 +57,16 @@
                         </svg>
                         {{ el.dragon.rating }}
                     </span>
-                    <span class="product__testimonials">рейтинг дракона</span>
+                    <span class="product__testimonials">{%  trans "рейтинг дракона" %}</span>
                 </div>
                  <div class="product__dragon_info">
-                     <span class="product__term">Редкость: {{ el.rarity }}</span>
+                     <span class="product__term">{%  trans "Редкость:" %} {{ el.rarity }}</span>
                  </div>
-                <div class="product__price product-price">
-                    <span class="product-dragon__about">Стихии: </span>
-                    <span class="product__dragon_elements"><img src="{{ el.dragon.element1.url }}" alt="Главная стихия"></span>
-                    <span class="product__dragon_elements"><img src="{{ el.dragon.element2.url }}" alt="Вторая стихия"></span>
-                    <span class="product__dragon_elements"><img src="{{ el.dragon.element3.url }}" alt="Третья стихия"></span>
+                <div class="product__price product-price dragon-catalog">
+                    <span class="product-dragon__about">{%  trans "Стихии:" %}</span>
+                    <span class="product__dragon_elements"><img src="{{ el.dragon.element1.url }}" alt={%  trans "Главная стихия" %}></span>
+                    <span class="product__dragon_elements"><img src="{{ el.dragon.element2.url }}" alt={%  trans "Вторая стихия" %}></span>
+                    <span class="product__dragon_elements"><img src="{{ el.dragon.element3.url }}" alt={%  trans "Третья стихия" %}></span>
                 </div>
                 </div>
             </article >

@@ -5,47 +5,48 @@
 {% endblock %}
 
 {% block content %}
+    {% load i18n %}
     <div class="wrapper__dragons_catalog">
         <div class="collection">
             <div class="collection__header">
                 <div class="collection__search">
                     <form class="form-inline" action="">
-                        <input class="form-control" type="search" name="search" placeholder="Поиск" aria-label="Поиск">
-                        <button class="btn btn-warning" type="submit">Найти</button>
+                        <input class="form-control" type="search" name="search" placeholder={%  trans "Поиск" %} aria-label={%  trans "Поиск" %}>
+                        <button class="btn btn-warning" type="submit">{%  trans "Найти" %}</button>
                     </form>
                 </div>
-                <h3 class="collection__title">Каталог товаров</h3>
+                <a href="/" class="collection__title">{%  trans "Каталог товаров" %}</a>
             </div>
         </div>
         <div class="collection__carts">
             {% for el in dragons_in_catalog %}
             <article class="product">
                 <div class="product__background">
-                <a href="" class="product__image">
+                <a href="dragons?id={{ el.dragon.id }}" class="product__image">
                     <div class="product__rarity">
-                        <img src="{{ el.dragon.usual_pic.url }}" alt="Редкость">
+                        <img src="{{ el.dragon.usual_pic.url }}" alt={%  trans "Редкость" %}>
                     </div>
                     <div class="product__switch image-switch">
                         <div class="image-switch__item">
                             <div class="image-switch__img">
-                                <img src="{{ el.dragon.image1.url}}" alt="Форма дракона 1">
+                                <img src="{{ el.dragon.image1.url}}" alt={%  trans "Форма дракона 1" %}>
                             </div>
                         </div>
                         <div class="image-switch__item">
                             <div class="image-switch__img">
-                                <img src="{{ el.dragon.image2.url}}" alt="Форма дракона 2">
+                                <img src="{{ el.dragon.image2.url}}" alt={%  trans "Форма дракона 2" %}>
                             </div>
                         </div>
                         <div class="image-switch__item">
                             <div class="image-switch__img">
-                                <img src="{{ el.dragon.image3.url}}" alt="Форма дракона 3">
+                                <img src="{{ el.dragon.image3.url}}" alt={%  trans "Форма дракона 3" %}>
                             </div>
                         </div>
                     </div>
                     <ul class="product__image-pagination image-pagination" aria-hidden="true"></ul>
                 </a>
                 <h3 class="product__title">
-                    <a href="">{{ el.name }}</a>
+                    <a href="dragons?id={{ el.dragon.id }}">{%  trans "Набор:" %} {{ el.name }}</a>
                 </h3>
                 <div class="product__props">
                     <span class="product__rating">
@@ -56,17 +57,23 @@
                         </svg>
                         {{ el.dragon.rating }}
                     </span>
-                    <span class="product__testimonials">рейтинг набора</span>
+                    <span class="product__testimonials">{%  trans "рейтинг набора" %}</span>
                 </div>
                  <div class="product__info">
-                     <span class="product__term">Ограничение: 1 набор/день</span>
-                     <span class="product__available">Количество: 1шт</span>
+                     <span class="product__term">{%  trans "Ограничение: 1 набор/день" %}</span>
+                     <span class="product__available">{%  trans "Количество: 1шт" %}</span>
                  </div>
                 <div class="product__price product-price">
+                    <div class="price__current">
+                        <p>{%  trans "Новая цена:" %}</p>
+                    </div>
                     <span class="product-price__current">100 $</span>
-                    <span class="product-price__old">Старая цена: 67 $</span>
+                    <div class="price__old">
+                        <p>{%  trans "Старая цена:" %}</p>
+                    </div>
+                    <span class="product-price__old">67 $</span>
                 </div>
-                <button class="product__btn">Добавить в корзину</button>
+                <button class="product__btn">{%  trans "Добавить в корзину" %}</button>
                 </div>
             </article >
             {% endfor %}

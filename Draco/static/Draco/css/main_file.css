@@ -150,6 +150,8 @@ input,button,textarea {font-family: inherit;}
 }
 
 .menu__sub-link {
+    display: flex;
+    align-items: center;
     color: var(--color-black);
     font-size: 18px;
     font-family: var(--font-family-main);
@@ -157,6 +159,13 @@ input,button,textarea {font-family: inherit;}
 
 .menu__sub-link:hover {
     text-decoration: underline;
+}
+
+.menu__sub-link img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    margin: 0 0 0 10px;
 }
 
 .menu__arrow {
@@ -356,6 +365,7 @@ body._touch .menu__list > li._active .menu__arrow {
     visibility: hidden;
     overflow-y: auto;
     overflow-x: hidden;
+    z-index: 5;
 }
 
 .popup.open {

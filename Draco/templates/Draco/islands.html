@@ -16,7 +16,7 @@
     {% load i18n %}
     <header class="header">
         <div class="header__container">
-            <a href="" class="header__logo"><img alt="Логотип" src="/media/web_media/other/Icon_Logo.png"></a>
+            <a href="/" class="header__logo"><img alt="Логотип" src="/media/web_media/other/Icon_Logo.png"></a>
             <div class="header__menu menu">
                 <div class="menu__icon">
                     <span></span>
@@ -70,7 +70,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="menu__link">RU</a>
+                            <a href="javascript:void(0);" class="menu__link"><img src="/media/web_media/other/global-icon.png" alt={% trans "Смена языка" %}></a>
                             <span class="menu__arrow"></span>
                             <ul class="menu__sub-list">
                                 <li><a href="translate?code=ru" class="menu__sub-link">RU</a></li>
@@ -81,10 +81,20 @@
                             <a href="javascript:void(0);" class="menu__link">{% trans "Профиль" %}</a>
                             <span class="menu__arrow"></span>
                             <ul class="menu__sub-list">
-                                <li><a href="javascript:void(0);" class="menu__sub-link">Юзернейм</a></li>
+                                <li><a href="javascript:void(0);" class="menu__sub-link">{{ user.username }}</a></li>
                                 <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Форум" %}</a></li>
                                 <li><a href="{% url 'draconomania_store' %}" class="menu__sub-link">{% trans "Магазин" %}</a></li>
-                                <li><a href="#" class="menu__sub-link">Войти/Выйти</a></li>
+                                <li><a href="do_logout" class="menu__sub-link">{% trans "Выйти" %}</a></li>
+                            </ul>
+                                {% else %}
+                                <a href="javascript:void(0);" class="menu__link">{% trans "Профиль" %}</a>
+                            <span class="menu__arrow"></span>
+                            <ul class="menu__sub-list">
+                                <li><a href="javascript:void(0);" class="menu__sub-link">Гость онлайн</a></li>
+                                <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Форум" %}</a></li>
+                                <li><a href="{% url 'draconomania_store' %}" class="menu__sub-link">{% trans "Магазин" %}</a></li>
+                                <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Регистрация / Войти" %}</a></li>
+                            {% endif %}
                             </ul>
                         </li>
                     </ul>

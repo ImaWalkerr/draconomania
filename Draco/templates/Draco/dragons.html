@@ -5,64 +5,85 @@
 {% endblock %}
 
 {% block content %}
+    {% load i18n %}
     <div class="wrapper__dragons_catalog">
         <div class="collection">
             <div class="collection__header_dragon">
-                <h3 class="collection__title">Коллекция Дракономании / Дракон {{ dragon_trans.name }}</h3>
+                <a href="/" class="collection__title">{% trans "Коллекция Дракономании / Дракон" %} {{ dragon_trans.name }}</a>
             </div>
         </div>
         <div class="dragon__collage image collage">
             <div class="image__background_egg">
-                <img src="{{ dragon.image1.url }}" class="image__egg" alt="Форма яйца">
-                <h3 class="dragon__name">Яйцо</h3>
+                <img src="{{ dragon.image1.url }}" class="image__egg" alt={% trans "Форма яйца" %}>
+                <h3 class="dragon__name">{% trans "Яйцо" %}</h3>
                 <div class="dragon__rarity">
-                    <img src="{{ dragon.usual_pic.url }}" alt="Редкость">
+                    <img src="{{ dragon.usual_pic.url }}" alt={% trans "Редкость" %}>
                 </div>
             </div>
             <div class="image__background_small">
-                <img src="{{ dragon.image3.url }}" class="image__small" alt="Форма детеныша">
-                <h3 class="dragon__name">Детеныш</h3>
+                <img src="{{ dragon.image3.url }}" class="image__small" alt={% trans "Форма детеныша" %}>
+                <h3 class="dragon__name">{% trans "Детеныш" %}</h3>
                 <div class="dragon__rarity">
-                    <img src="{{ dragon.usual_pic.url }}" alt="Редкость">
+                    <img src="{{ dragon.usual_pic.url }}" alt={% trans "Редкость" %}>
                 </div>
             </div>
             <div class="image__background_big">
-                <img src="{{ dragon.image2.url }}" class="image__big" alt="Форма взрослого">
-                <h3 class="dragon__name">Взрослый</h3>
+                <img src="{{ dragon.image2.url }}" class="image__big" alt={% trans "Форма взрослого" %}>
+                <h3 class="dragon__name">{% trans "Взрослый" %}</h3>
                 <div class="dragon__rarity">
-                    <img src="{{ dragon.usual_pic.url }}" alt="Редкость">
+                    <img src="{{ dragon.usual_pic.url }}" alt={% trans "Редкость" %}>
                 </div>
             </div>
             <div class="collage__table">
+                {% for el in pic_for_tables %}
                 <div class="table__info_dragons">
                     <div class="table__main_1 dragon__border"><p>{{ dragon_trans.name }}</p></div>
-                    <div class="table__main_2 dragon__border">Уровень 1</div>
-                    <div class="table__image">Атака</div>
+                    <div class="table__main_2 dragon__border">{% trans "Уровень 1" %}</div>
+                    <div class="table__image">
+                        <div class="table__image-text">{% trans "Атака" %}</div>
+                        <div class="table__image-image"><img alt="{% trans "Атака" %}" src="{{ el.attack_pic.url }}"></div>
+                    </div>
                     <div class="table__text">{{ dragon.dmg }}</div>
-                    <div class="table__image">Здоровье</div>
+                    <div class="table__image">
+                        <div class="table__image-text">{% trans "Здоровье" %}</div>
+                        <div class="table__image-image"><img alt="{% trans "Здоровье" %}" src="{{ el.hp_pic.url }}"></div>
+                    </div>
                     <div class="table__text">{{ dragon.hp }}</div>
-                    <div class="table__image">Золото/час</div>
+                    <div class="table__image">
+                        <div class="table__image-text">{% trans "Золото/час" %}</div>
+                        <div class="table__image-image"><img alt="{% trans "Золото/час" %}" src="{{ el.gold_pic.url }}"></div>
+                    </div>
                     <div class="table__text">{{ dragon.gold }}</div>
-                    <div class="table__image">Опыт за разведение</div>
+                    <div class="table__image">
+                        <div class="table__image-text">{% trans "Опыт за разведение" %}</div>
+                        <div class="table__image-image"><img alt="{% trans "Опыт за разведение" %}" src="{{ el.hp_pic.url }}"></div>
+                    </div>
                     <div class="table__text">{{ dragon.exp }}</div>
-                    <div class="table__image">Золото за продажу</div>
+                    <div class="table__image">
+                        <div class="table__image-text">{% trans "Золото за продажу" %}</div>
+                        <div class="table__image-image"><img alt="{% trans "Золото за продажу" %}" src="{{ el.sale_pic.url }}"></div>
+                    </div>
                     <div class="table__text">{{ dragon.sale }}</div>
-                    <div class="table__image image__last">Очки выведения</div>
+                    <div class="table__image image__last">
+                        <div class="table__image-text">{% trans "Очки выведения" %}</div>
+                        <div class="table__image-image"><img alt="{% trans "Очки выведения" %}" src="{{ el.points_pic.url }}"></div>
+                    </div>
                     <div class="table__text text__last">{{ dragon.points }}</div>
                 </div>
+                {% endfor %}
             </div>
         </div>
         <div class="dragon__text description">
             <div class="description__dragon">
-                <div class="description__title">Описание</div>
+                <div class="description__title">{% trans "Описание" %}</div>
                 <div class="description__text">{{ dragon_trans.description1 }}</div>
             </div>
             <div class="description__dragon">
-                <div class="description__title">Получение</div>
+                <div class="description__title">{% trans "Получение" %}</div>
                 <div class="description__text">{{ dragon_trans.description2 }}</div>
             </div>
             <div class="description__dragon">
-                <div class="description__title">Выведение</div>
+                <div class="description__title">{% trans "Выведение" %}</div>
                 <div class="description__text">{{ dragon_trans.description3 }}</div>
             </div>
         </div>

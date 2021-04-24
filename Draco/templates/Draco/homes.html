@@ -16,7 +16,7 @@
     {% load i18n %}
     <header class="header">
         <div class="header__container">
-            <a href="" class="header__logo"><img alt="Логотип" src="/media/web_media/other/Icon_Logo.png"></a>
+            <a href="/" class="header__logo"><img alt={% trans "Логотип" %} src="/media/web_media/other/Icon_Logo.png"></a>
             <div class="header__menu menu">
                 <div class="menu__icon">
                     <span></span>
@@ -51,26 +51,28 @@
                             </ul>
                         </li>
                         <li>
+                            {% for el in elements_homes %}
                             <a href="javascript:void(0);" class="menu__link">{% trans "Навигация" %}</a>
                             <span class="menu__arrow"></span>
                             <ul class="menu__sub-list">
-                                <li><a data-goto=".page__section_1" href="javascript:void(0);" class="menu__sub-link">{% trans "Огонь" %}</a></li>
-                                <li><a data-goto=".page__section_2" href="javascript:void(0);" class="menu__sub-link">{% trans "Ветер" %}</a></li>
-                                <li><a data-goto=".page__section_3" href="javascript:void(0);" class="menu__sub-link">{% trans "Земля" %}</a></li>
-                                <li><a data-goto=".page__section_4" href="javascript:void(0);" class="menu__sub-link">{% trans "Вода" %}</a></li>
-                                <li><a data-goto=".page__section_5" href="javascript:void(0);" class="menu__sub-link">{% trans "Зелень" %}</a></li>
-                                <li><a data-goto=".page__section_6" href="javascript:void(0);" class="menu__sub-link">{% trans "Металл" %}</a></li>
-                                <li><a data-goto=".page__section_7" href="javascript:void(0);" class="menu_sub-link">{% trans "Энергия" %}</a></li>
-                                <li><a data-goto=".page__section_8" href="javascript:void(0);" class="menu__sub-link">{% trans "Пустота" %}</a></li>
-                                <li><a data-goto=".page__section_9" href="javascript:void(0);" class="menu__sub-link">{% trans "Свет" %}</a></li>
-                                <li><a data-goto=".page__section_10" href="javascript:void(0);" class="menu__sub-link">{% trans "Тень" %}</a></li>
-                                <li><a data-goto=".page__section_11" href="javascript:void(0);" class="menu__sub-link">{% trans "Легенда" %}</a></li>
-                                <li><a data-goto=".page__section_12" href="javascript:void(0);" class="menu__sub-link">{% trans "Божество" %}</a></li>
-                                <li><a data-goto=".page__section_13" href="javascript:void(0);" class="menu__sub-link">{% trans "Древняя" %}</a></li>
+                                <li><a data-goto=".page__section_1" href="javascript:void(0);" class="menu__sub-link">{% trans "Огонь" %}<img alt={% trans "Стихия 1" %} src="{{ el.element_1.url }}"></a></li>
+                                <li><a data-goto=".page__section_2" href="javascript:void(0);" class="menu__sub-link">{% trans "Ветер" %}<img alt={% trans "Стихия 2" %} src="{{ el.element_2.url }}"></a></li>
+                                <li><a data-goto=".page__section_3" href="javascript:void(0);" class="menu__sub-link">{% trans "Земля" %}<img alt={% trans "Стихия 3" %} src="{{ el.element_3.url }}"></a></li>
+                                <li><a data-goto=".page__section_4" href="javascript:void(0);" class="menu__sub-link">{% trans "Вода" %}<img alt={% trans "Стихия 4" %} src="{{ el.element_4.url }}"></a></li>
+                                <li><a data-goto=".page__section_5" href="javascript:void(0);" class="menu__sub-link">{% trans "Зелень" %}<img alt={% trans "Стихия 5" %} src="{{ el.element_5.url }}"></a></li>
+                                <li><a data-goto=".page__section_6" href="javascript:void(0);" class="menu__sub-link">{% trans "Металл" %}<img alt={% trans "Стихия 6" %} src="{{ el.element_6.url }}"></a></li>
+                                <li><a data-goto=".page__section_7" href="javascript:void(0);" class="menu__sub-link">{% trans "Энергия" %}<img alt={% trans "Стихия 7" %} src="{{ el.element_7.url }}"></a></li>
+                                <li><a data-goto=".page__section_8" href="javascript:void(0);" class="menu__sub-link">{% trans "Пустота" %}<img alt={% trans "Стихия 8" %} src="{{ el.element_8.url }}"></a></li>
+                                <li><a data-goto=".page__section_9" href="javascript:void(0);" class="menu__sub-link">{% trans "Свет" %}<img alt={% trans "Стихия 9" %} src="{{ el.element_9.url }}"></a></li>
+                                <li><a data-goto=".page__section_10" href="javascript:void(0);" class="menu__sub-link">{% trans "Тень" %}<img alt={% trans "Стихия 10" %} src="{{ el.element_10.url }}"></a></li>
+                                <li><a data-goto=".page__section_11" href="javascript:void(0);" class="menu__sub-link">{% trans "Легенда" %}<img alt={% trans "Стихия 11" %} src="{{ el.element_11.url }}"></a></li>
+                                <li><a data-goto=".page__section_12" href="javascript:void(0);" class="menu__sub-link">{% trans "Божество" %}<img alt={% trans "Стихия 12" %} src="{{ el.element_12.url }}"></a></li>
+                                <li><a data-goto=".page__section_13" href="javascript:void(0);" class="menu__sub-link">{% trans "Древняя" %}<img alt={% trans "Стихия 13" %} src="{{ el.element_13.url }}"></a></li>
                             </ul>
+                            {% endfor %}
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="menu__link">RU</a>
+                            <a href="javascript:void(0);" class="menu__link"><img src="/media/web_media/other/global-icon.png" alt={% trans "Смена языка" %}></a>
                             <span class="menu__arrow"></span>
                             <ul class="menu__sub-list">
                                 <li><a href="translate?code=ru" class="menu__sub-link">RU</a></li>
@@ -78,13 +80,24 @@
                             </ul>
                         </li>
                         <li>
+                            {% if request.user.is_authenticated %}
                             <a href="javascript:void(0);" class="menu__link">{% trans "Профиль" %}</a>
                             <span class="menu__arrow"></span>
                             <ul class="menu__sub-list">
-                                <li><a href="javascript:void(0);" class="menu__sub-link">Юзернейм</a></li>
+                                <li><a href="javascript:void(0);" class="menu__sub-link">{{ user.username }}</a></li>
                                 <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Форум" %}</a></li>
                                 <li><a href="{% url 'draconomania_store' %}" class="menu__sub-link">{% trans "Магазин" %}</a></li>
-                                <li><a href="#" class="menu__sub-link">Войти/Выйти</a></li>
+                                <li><a href="do_logout" class="menu__sub-link">{% trans "Выйти" %}</a></li>
+                            </ul>
+                                {% else %}
+                                <a href="javascript:void(0);" class="menu__link">{% trans "Профиль" %}</a>
+                            <span class="menu__arrow"></span>
+                            <ul class="menu__sub-list">
+                                <li><a href="javascript:void(0);" class="menu__sub-link">Гость онлайн</a></li>
+                                <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Форум" %}</a></li>
+                                <li><a href="{% url 'draconomania_store' %}" class="menu__sub-link">{% trans "Магазин" %}</a></li>
+                                <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Регистрация / Войти" %}</a></li>
+                            {% endif %}
                             </ul>
                         </li>
                     </ul>
@@ -123,14 +136,21 @@
         <section class="page__section page__section_1">
             <div class="clip page__img_1"></div>
             <div class="clip page__img_2"></div>
-            <h1 class="page__title">Отличная статья</h1>
-            <div class="page__text">
-                <p>ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
-                   ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
-                   ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
-                   ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
-                   ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
-                   ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип</p>
+            <div class="page__body" id="grid__homes">
+                <div>
+                    <h1>Отличная статья</h1>
+                </div>
+                <div class="page__image">
+                    <img src="/media/web_media/dragons/Апофис_взрослый.png">
+                </div>
+                <div>
+                    <p>ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
+                    ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
+                    ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
+                    ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
+                    ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип<br />
+                    ТУТ БУДЕТ МНОГО БУКАФ оалтплотыплоыктлотплофым<br />тфлоптфлылоиофипопилоифлопяполыпоиплоип</p>
+                </div>
             </div>
         </section>
         <section class="page__section page__section_2">

@@ -56,6 +56,12 @@
     color: var(--color-red);
 }
 
+.menu__link img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+}
+
 @media (max-width: 767px) {
     .header-menu__link {
         font-size: 12px;
@@ -137,12 +143,24 @@
 }
 
 .screen__text {
-    font-size: 20px;
+    font-family: var(--font-family-main);
+    font-weight: 400;
+    font-size: 18px;
     line-height: 130%;
     color: var(--color-white);
     padding: 15px;
     margin: 15px;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.screen__screen-text {
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.screen__screen-youtube {
+    padding: 15px;
+    margin: 0 10px;
 }
 
 .screen__title p {

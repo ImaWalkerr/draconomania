@@ -30,8 +30,8 @@
                             <span class="menu__arrow"></span>
                             <ul class="menu__sub-list">
                                 <li><a href="{% url 'dragons_catalog' %}" class="menu__sub-link">{% trans "Драконы" %}</a></li>
-                                <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Жилища" %}</a></li>
-                                <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Острова" %}</a></li>
+                                <li><a href="{% url 'homes' %}" class="menu__sub-link">{% trans "Жилища" %}</a></li>
+                                <li><a href="{% url 'islands' %}" class="menu__sub-link">{% trans "Острова" %}</a></li>
                             </ul>
                         </li>
                         <li>
@@ -52,7 +52,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="javascript:void(0);" class="menu__link">RU</a>
+                            <a href="javascript:void(0);" class="menu__link"><img src="/media/web_media/other/global-icon.png" alt={% trans "Смена языка" %}></a>
                             <span class="menu__arrow"></span>
                             <ul class="menu__sub-list">
                                 <li><a href="translate?code=ru" class="menu__sub-link">RU</a></li>
@@ -76,7 +76,7 @@
                                 <li><a href="javascript:void(0);" class="menu__sub-link">Гость онлайн</a></li>
                                 <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Форум" %}</a></li>
                                 <li><a href="{% url 'draconomania_store' %}" class="menu__sub-link">{% trans "Магазин" %}</a></li>
-                                <li><a href="{% url 'see_register' %}" class="menu__sub-link">{% trans "Регистрация / Войти" %}</a></li>
+                                <li><a href="javascript:void(0);" class="menu__sub-link">{% trans "Регистрация / Войти" %}</a></li>
                             {% endif %}
                             </ul>
                         </li>
@@ -113,32 +113,35 @@
         </div>
     </header>
     <main class="page__base">
-       <div class="header-slider">
-        <nav class="header-slider__menu header-menu">
-            <a href="javascript:void(0);" class="header-menu__link">{%  trans "Об игре" %}</a>
-            <a href="javascript:void(0);" class="header-menu__link">{%  trans "Геймплей" %}</a>
-            <a href="javascript:void(0);" class="header-menu__link">{%  trans "Драконы" %}</a>
-            <a href="javascript:void(0);" class="header-menu__link">{%  trans "Сражения" %}</a>
-            <a href="javascript:void(0);" class="header-menu__link">{%  trans "Итог" %}</a>
-        </nav>
-    </div>
-    <div class="page__slider">
-        {% for el in main_pages %} }}
-        <div class="page__wrapper">
-            <div class="page__screen screen">
-                <div class="screen__content">
-                    <h1 class="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">
-                        {% trans "Добро пожаловать в Легенды Дракономании!" %}</h1>
-                    <div class="screen__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                        <p>{{ el.description1 }}</p>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/xdlcVXvYzeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/KDQ-DmhFVEM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/XcrFe9GjfW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="header-slider">
+            <nav class="header-slider__menu header-menu">
+                <a href="javascript:void(0);" class="header-menu__link">{%  trans "Об игре" %}</a>
+                <a href="javascript:void(0);" class="header-menu__link">{%  trans "Геймплей" %}</a>
+                <a href="javascript:void(0);" class="header-menu__link">{%  trans "Драконы" %}</a>
+                <a href="javascript:void(0);" class="header-menu__link">{%  trans "Сражения" %}</a>
+                <a href="javascript:void(0);" class="header-menu__link">{%  trans "Итог" %}</a>
+            </nav>
+        </div>
+        <div class="page__slider">
+            {% for el in main_pages %}
+            <div class="page__wrapper">
+                <div class="page__screen screen">
+                    <div class="screen__content">
+                        <h1 class="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">{% trans "Добро пожаловать в Легенды Дракономании!" %}</h1>
+                        <div class="screen__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
+                            <div class="screen__screen-text">
+                                <p>{{ el.description1 }}</p>
+                            </div>
+                            <div class="screen__screen-youtube">
+                            <iframe width="450" height="230" src="https://www.youtube.com/embed/xdlcVXvYzeI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="230" src="https://www.youtube.com/embed/KDQ-DmhFVEM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="230" src="https://www.youtube.com/embed/XcrFe9GjfW0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="screen__body">
                     <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                        <img src="/media/web_media/other/slide-1.jpg" alt="Слайд_1">
+                        <img src="/media/web_media/other/slide-1.jpg" alt={%  trans "Слайд 1" %}>
                     </div>
                 </div>
             </div>
@@ -146,15 +149,19 @@
                 <div class="screen__content">
                     <h2 class="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">{%  trans "Геймплей" %}</h2>
                     <div class="screen__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                        <p>{{ el.description2 }}</p>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/PrLUQfbdiqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/lXIEyHRYQus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/J2XIeNqnlB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="screen__screen-text">
+                            <p>{{ el.description2 }}</p>
+                        </div>
+                        <div class="screen__screen-youtube">
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/PrLUQfbdiqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/lXIEyHRYQus" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/J2XIeNqnlB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="screen__body">
                     <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                        <img src="/media/web_media/other/slide-2.png" alt="Слайд_2">
+                        <img src="/media/web_media/other/slide-2.png" alt={%  trans "Слайд 2" %}>
                     </div>
                 </div>
             </div>
@@ -162,15 +169,19 @@
                 <div class="screen__content">
                     <h2 class="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">{%  trans "Драконы" %}</h2>
                     <div class="screen__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                        <p>{{ el.description3 }}</p>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/m0uqclxZ_W0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/5jfYnHkBHnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/98-gMyrRSPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="screen__screen-text">
+                            <p>{{ el.description3 }}</p>
+                        </div>
+                        <div class="screen__screen-youtube">
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/m0uqclxZ_W0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/5jfYnHkBHnk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/98-gMyrRSPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="screen__body">
                     <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                        <img src="/media/web_media/other/slide-3.jpg" alt="">
+                        <img src="/media/web_media/other/slide-3.jpg" alt={%  trans "Слайд 3" %}>
                     </div>
                 </div>
             </div>
@@ -178,15 +189,19 @@
                 <div class="screen__content">
                     <h2 class="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">{%  trans "Сражения" %}</h2>
                     <div class="screen__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                        <p>{{ el.description4 }}</p>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/YRTsfI_cvCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/afn97mMeaJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/tjd5qAnShlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="screen__screen-text">
+                            <p>{{ el.description4 }}</p>
+                        </div>
+                        <div class="screen__screen-youtube">
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/YRTsfI_cvCQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/afn97mMeaJk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/tjd5qAnShlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="screen__body">
                     <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                        <img src="/media/web_media/other/slide-6.png" alt="Слайд_4">
+                        <img src="/media/web_media/other/slide-6.png" alt={%  trans "Слайд 4" %}>
                     </div>
                 </div>
             </div>
@@ -194,15 +209,19 @@
                 <div class="screen__content">
                     <h2 class="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">{%  trans "Итог" %}</h2>
                     <div class="screen__text" data-swiper-parallax-opacity="0" data-swiper-parallax="-100%" data-swiper-parallax-duration="1000">
-                        <p>{{ el.description5 }}</p>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/aMDcs18hCbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/8lr062r8SDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        <iframe width="450" height="250" src="https://www.youtube.com/embed/qnI3dEwTXKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class="screen__screen-text">
+                            <p>{{ el.description5 }}</p>
+                        </div>
+                        <div class="screen__screen-youtube">
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/aMDcs18hCbc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/8lr062r8SDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="450" height="250" src="https://www.youtube.com/embed/qnI3dEwTXKY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
                 <div class="screen__body">
                     <div class="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">
-                        <img src="/media/web_media/other/slide-7.png" alt="Слайд_5">
+                        <img src="/media/web_media/other/slide-7.png" alt={%  trans "Слайд 5" %}>
                     </div>
                 </div>
             </div>
@@ -216,10 +235,10 @@
         <div class="footer__container">
             <nav class="footer__menu">
                 <ul class="menu__list">
-                    <li><a href="#popup_1" class="popup__link">{% trans "Пользовательское соглашение" %}</a></li>
-                    <li><a href="#popup_2" class="popup__link">{% trans "О нас" %}</a></li>
-                    <li><a href="#popup_3" class="popup__link">{% trans "Контакты" %}</a></li>
-                    <li><a href="javascript:void(0);" class="menu__link">2021, All website content subjected to copyright</a></li>
+                    <li><a href="javascript:void(0);" class="popup__link">{% trans "Пользовательское соглашение" %}</a></li>
+                    <li><a href="javascript:void(0);" class="popup__link">{% trans "О нас" %}</a></li>
+                    <li><a href="javascript:void(0);" class="popup__link">{% trans "Контакты" %}</a></li>
+                    <li><a href="javascript:void(0);" class="menu__link">{% trans "2021, All website content subjected to copyright" %}</a></li>
                 </ul>
             </nav>
             <div class="time">{% trans "МСК" %}<div id="time"></div></div>
@@ -261,7 +280,7 @@
     <div id="popup_1" class="popup">
         <div class="popup__body">
             <div class="popup__content">
-                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt={% trans "Закрыть окно" %}></a>
                 <div class="popup__title">Заголовок</div>
                 <div class="popup__text">Куча текста</div>
             </div>
@@ -270,7 +289,7 @@
     <div id="popup_2" class="popup">
         <div class="popup__body">
             <div class="popup__content">
-                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt={% trans "Закрыть окно" %}></a>
                 <div class="popup__title">Заголовок</div>
                 <div class="popup__text">Куча текста</div>
             </div>
@@ -279,7 +298,7 @@
     <div id="popup_3" class="popup">
         <div class="popup__body">
             <div class="popup__content">
-                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt={% trans "Закрыть окно" %}></a>
                 <div class="popup__title">Заголовок</div>
                 <div class="popup__text">Куча текста</div>
             </div>
@@ -288,7 +307,7 @@
     <div id="popup_4" class="popup">
         <div class="popup__body">
             <div class="popup__content">
-                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt={% trans "Закрыть окно" %}></a>
                 <div class="popup__title">Заголовок</div>
                 <div class="popup__text">Куча текста</div>
             </div>
@@ -297,7 +316,7 @@
     <div id="popup_5" class="popup">
         <div class="popup__body">
             <div class="popup__content">
-                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt="Закрыть окно"></a>
+                <a href="#header" class="popup__close"><img src="/media/web_media/other/delete-round-button.png" alt={% trans "Закрыть окно" %}></a>
                 <div class="popup__title">Заголовок</div>
                 <div class="popup__text">Куча текста</div>
             </div>
